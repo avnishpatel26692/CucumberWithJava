@@ -61,7 +61,7 @@ public class SampleSteps {
       nameText.sendKeys(arg1);
     }
 
-    @When("^User enter age : (\\d+)$")
+    @When("^User enter age : \"([^\"]*)\"$")
     public void user_enter_age(int arg1) throws Throwable {
         WebElement ageText = driver.findElement(By.id("age"));
         ageText.clear();
