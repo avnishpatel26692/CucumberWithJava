@@ -6,6 +6,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en_scouse.An;
+import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -47,6 +48,57 @@ public class SampleSteps {
     public void iShouldSeeMenu() throws Throwable {
         assertTrue(driver.findElement(By.className("w3-navbar")).isDisplayed());
     }
+
+    @When("^User navigate to link Page$")
+    public void user_navigate_to_link_Page() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^User should verify page is opened correctly$")
+    public void user_should_verify_page_is_opened_correctly() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Given("^User navigate to Age Page$")
+    public void user_navigate_to_Age_Page() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       this.driver.get("https://kristinek.github.io/site/examples/age");
+        //throw new PendingException();
+    }
+
+    @When("^user enter name:\"([^\"]*)\"$")
+    public void user_enter_name(String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement nameText = this.driver.findElement(By.id("name"));
+        nameText.clear();
+        nameText.sendKeys(new CharSequence[]{arg2});
+        //throw new PendingException();
+    }
+
+    @When("^user enter age: (\\d+)$")
+    public void user_enter_age(String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement ageText = this.driver.findElement(By.name("age"));
+        ageText.sendKeys(new CharSequence[]{arg2});
+        // throw new PendingException();
+    }
+
+    @When("^click on submit button$")
+    public void click_on_submit_button() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        this.driver.findElement(By.id("submit")).click();
+        //throw new PendingException();
+    }
+
+    @Then("^user see message: \"([^\"]*)\"$")
+    public void user_see_message(String arg) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Assert.assertEquals(arg, this.driver.findElement(By.id("message")).getText());
+        //throw new PendingException();
+    }
+
 }
 
 
