@@ -89,6 +89,38 @@ public class SampleSteps {
         WebElement head1text = driver.findElement(By.xpath("//h1[text()='Lorem ipsum']"));
         Assert.assertEquals("Lorem ipsum", head1text.getText());
     }
+
+    //Task1 steps
+    @Given("^I am on number page$")
+    public void i_am_on_number_page() throws Throwable {
+        driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
+
+    }
+
+    @When("^I enter number: \"([^\"]*)\"$")
+    public void i_enter_number(String arg1) throws Throwable {
+        WebElement numberField = driver.findElement(By.id("numb"));
+        numberField.clear();
+        numberField.sendKeys(arg1);
+    }
+
+    @When("^I click submit number$")
+    public void i_click_submit_number() throws Throwable {
+        WebElement btn = driver.findElement(By.xpath("//button[text()='Submit']"));
+        btn.click();
+    }
+
+    @Then("^I see a message: \"([^\"]*)\"$")
+    public void i_see_a_message(String arg1) throws Throwable {
+        WebElement errorMsg = driver.findElement(By.id("ch1_error"));
+        Assert.assertEquals(arg1,errorMsg.getText());
+
+    }
+
+    @Then("^I see a new message: \"([^\"]*)\"$")
+    public void i_see_a_new_message(String arg1) throws Throwable {
+        Assert.assertEquals(arg1,driver.switchTo().alert().getText());
+    }
 }
 
 
