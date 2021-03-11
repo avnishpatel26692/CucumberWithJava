@@ -206,6 +206,54 @@ public class SampleSteps {
     public void message(String arg1) throws Throwable {
         Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
     }
+
+
+
+
+
+    @Given("^I am on number page$")
+    public void iAmOnNumberPage() {
+        driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
+    }
+
+    @When("^I enter number: \"([^\"]*)\"$")
+    public void iEnterNumber(String arg1) throws Throwable {
+        WebElement numberText = driver.findElement(By.id("numb"));
+        numberText.sendKeys("" + arg1);
+    }
+
+    @And("^I click submit number$")
+    public void iClickSubmitNumber() {
+        driver.findElement(By.xpath("//button[text()='Submit']"));
+    }
+
+    @Then("^I see a message: \"([^\"]*)\"$")
+    public void iSeeAMessage(String arg1) throws Throwable {
+        Assert.assertEquals(arg1, driver.findElement(By.id("ch1_error")).getText());
+    }
+
+//    @Then("^I see a message1: \"([^\"]*)\"$")
+//    public void iSeeAMessage1(String arg1) throws Throwable {
+//        Assert.assertEquals(arg1, driver.findElement(By.xpath("//p[text()='Please enter a number']")).getText());
+//    }
+//
+//    @Then("^I see a message2: \"([^\"]*)\"$")
+//    public void iSeeAMessage2(String arg1) throws Throwable {
+//        Assert.assertEquals(arg1, driver.findElement(By.xpath("//p[text()='Number is too big']")).getText());
+//    }
+//
+//    @Then("^I see a message3: \"([^\"]*)\"$")
+//    public void iSeeAMessage3(String arg1) throws Throwable {
+//        Assert.assertEquals(arg1, driver.findElement(By.xpath("//p[text()='Number is too small']")).getText());
+//    }
+
+    @Then("^I see a new message : \"([^\"]*)\"$")
+    public void iSeeANewMessage(String arg1) throws Throwable {
+        Alert alert = driver.switchTo().alert();
+        String message = alert.getText();
+        Assert.assertEquals("Square root of 64 is 8.00", message);
+//        Assert.assertEquals(arg1, driver.findElement(By.id("w3-input w3-border w3-pale-red required")).getText());
+    }
 }
 
 
