@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 1341116600,
+              "duration": 1349099000,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 3101204700,
+              "duration": 3090116100,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 857821300,
+              "duration": 950379500,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 62055900,
+              "duration": 57698400,
               "status": "passed"
             },
             "line": 7,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 35355600,
+              "duration": 31381800,
               "status": "passed"
             },
             "line": 8,
@@ -73,7 +73,7 @@
           },
           {
             "result": {
-              "duration": 18350500,
+              "duration": 17449900,
               "status": "passed"
             },
             "line": 9,
@@ -98,7 +98,7 @@
         "before": [
           {
             "result": {
-              "duration": 992384100,
+              "duration": 1002470800,
               "status": "passed"
             },
             "match": {
@@ -113,7 +113,7 @@
         "after": [
           {
             "result": {
-              "duration": 3095930400,
+              "duration": 3089865800,
               "status": "passed"
             },
             "match": {
@@ -126,7 +126,7 @@
         "steps": [
           {
             "result": {
-              "duration": 877064400,
+              "duration": 862903500,
               "status": "passed"
             },
             "line": 6,
@@ -138,7 +138,7 @@
           },
           {
             "result": {
-              "duration": 57804600,
+              "duration": 55233100,
               "status": "passed"
             },
             "line": 7,
@@ -159,7 +159,7 @@
           },
           {
             "result": {
-              "duration": 35247000,
+              "duration": 34327100,
               "status": "passed"
             },
             "line": 8,
@@ -171,7 +171,7 @@
           },
           {
             "result": {
-              "duration": 16553000,
+              "duration": 16758600,
               "status": "passed"
             },
             "line": 9,
@@ -196,7 +196,7 @@
         "before": [
           {
             "result": {
-              "duration": 999178200,
+              "duration": 991609200,
               "status": "passed"
             },
             "match": {
@@ -211,7 +211,7 @@
         "after": [
           {
             "result": {
-              "duration": 3084431100,
+              "duration": 3096888000,
               "status": "passed"
             },
             "match": {
@@ -224,7 +224,7 @@
         "steps": [
           {
             "result": {
-              "duration": 861264800,
+              "duration": 869983500,
               "status": "passed"
             },
             "line": 6,
@@ -236,7 +236,7 @@
           },
           {
             "result": {
-              "duration": 52783000,
+              "duration": 50421100,
               "status": "passed"
             },
             "line": 7,
@@ -257,7 +257,7 @@
           },
           {
             "result": {
-              "duration": 34613700,
+              "duration": 35518200,
               "status": "passed"
             },
             "line": 8,
@@ -269,7 +269,7 @@
           },
           {
             "result": {
-              "duration": 16729200,
+              "duration": 15869300,
               "status": "passed"
             },
             "line": 9,
@@ -287,104 +287,6 @@
           {
             "line": 4,
             "name": "@Scenario1"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 990029200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.openBrowser()"
-            }
-          }
-        ],
-        "line": 16,
-        "name": "Testing correct numbers",
-        "description": "",
-        "id": "testing-error-cases-and-correct-number-case;testing-correct-numbers",
-        "after": [
-          {
-            "result": {
-              "duration": 3084453900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.embedScreenshot(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 868854800,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I am on number page",
-            "match": {
-              "location": "SampleSteps.i_am_on_number_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 53301900,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I enter number: \"64\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "64",
-                  "offset": 17
-                }
-              ],
-              "location": "SampleSteps.i_enter_number(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 38490900,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I click submit number",
-            "match": {
-              "location": "SampleSteps.i_click_submit_number()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3376700,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I see a new message: \"Square root of 64 is 8.00\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Square root of 64 is 8.00",
-                  "offset": 22
-                }
-              ],
-              "location": "SampleSteps.i_see_a_new_message(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 15,
-            "name": "@Scenario2"
           }
         ]
       }

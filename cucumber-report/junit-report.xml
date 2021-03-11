@@ -1,30 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="20.578396">
-<testcase classname="Testing error cases and correct number case" name="Testing error cases" time="5.415905">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="15.617973">
+<testcase classname="Testing error cases and correct number case" name="Testing error cases" time="5.496125">
 <system-out><![CDATA[Given I am on number page...................................................passed
 When I enter number: dad....................................................passed
 And I click submit number...................................................passed
 Then I see a message: Please enter a number.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing error cases and correct number case" name="Testing error cases 2" time="5.074984">
+<testcase classname="Testing error cases and correct number case" name="Testing error cases 2" time="5.061559">
 <system-out><![CDATA[Given I am on number page...................................................passed
 When I enter number: 101....................................................passed
 And I click submit number...................................................passed
 Then I see a message: Number is too big.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing error cases and correct number case" name="Testing error cases 3" time="5.049">
+<testcase classname="Testing error cases and correct number case" name="Testing error cases 3" time="5.060289">
 <system-out><![CDATA[Given I am on number page...................................................passed
 When I enter number: 45.....................................................passed
 And I click submit number...................................................passed
 Then I see a message: Number is too small...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing error cases and correct number case" name="Testing correct numbers" time="5.038507">
-<system-out><![CDATA[Given I am on number page...................................................passed
-When I enter number: "64"...................................................passed
-And I click submit number...................................................passed
-Then I see a new message: "Square root of 64 is 8.00".......................passed
 ]]></system-out>
 </testcase>
 </testsuite>

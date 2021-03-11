@@ -172,7 +172,7 @@ public void i_am_on_number_page() throws Throwable {
     @Then("^I see a new message: \"([^\"]*)\"$")
     public void i_see_a_new_message(String arg1) throws Throwable {
         String errorMessage = driver.switchTo().alert().getText();
-        Assert.assertEquals("Square root of 64 is 8.00",errorMessage);
+        Assert.assertEquals(arg1 ,errorMessage);
     }
 
 
