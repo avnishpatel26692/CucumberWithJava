@@ -106,8 +106,8 @@ public class SampleSteps {
         nameText.sendKeys(arg1);
             }
 
-    @When("^user enter age : (\\d+)$")
-    public void user_enter_age(int arg1) throws Throwable {
+    @When("^user enter age : \"([^\"]*)\"$")
+    public void user_enter_age(String arg1) throws Throwable {
         WebElement ageText = driver.findElement(By.name("age"));
         ageText.sendKeys("" +arg1);
     }
@@ -119,7 +119,7 @@ public class SampleSteps {
 
     @Then("^user sees message : \"([^\"]*)\"$")
     public void user_sees_message(String arg1) throws Throwable {
-       Assert.assertEquals("Hello, Vasja, you are a kid", driver.findElement(By.id("message")).getText());
+       Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
     }
 
 
