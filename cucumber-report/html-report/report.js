@@ -1,105 +1,131 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Sample2.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Sample3.feature");
 formatter.feature({
   "line": 1,
-  "name": "As a Test Engineer I want to be able to create simple scenarios.",
+  "name": "Using Examples",
   "description": "",
-  "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.",
+  "id": "using-examples",
   "keyword": "Feature"
 });
-formatter.before({
-  "duration": 2807552500,
-  "status": "passed"
+formatter.scenarioOutline({
+  "line": 3,
+  "name": "checking Age functionality using examples",
+  "description": "",
+  "id": "using-examples;checking-age-functionality-using-examples",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
 });
-formatter.scenario({
+formatter.step({
   "line": 4,
-  "name": "Navigate to the Link Page",
-  "description": "",
-  "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.;navigate-to-the-link-page",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 3,
-      "name": "@LinkScenario"
-    }
-  ]
-});
-formatter.step({
-  "line": 5,
-  "name": "user navigates to Link Page",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 6,
-  "name": "user should verify the page is opened correctly",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "SampleSteps2.user_navigates_to_Link_Page()"
-});
-formatter.result({
-  "duration": 872592000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "SampleSteps2.user_should_verify_the_page_is_opened_correctly()"
-});
-formatter.result({
-  "duration": 11423999,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3380697001,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1565165600,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 9,
-  "name": "Check Age page functionality",
-  "description": "",
-  "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.;check-age-page-functionality",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 8,
-      "name": "@AgePageScenario"
-    }
-  ]
-});
-formatter.step({
-  "line": 10,
   "name": "User navigates to Age Page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 11,
-  "name": "User enter name : \"Nancy\"",
+  "line": 5,
+  "name": "User enter name : \"\u003cname\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 12,
-  "name": "User enter age : 29",
+  "line": 6,
+  "name": "User enter age : \"\u003cage\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
+  "line": 7,
   "name": "Click on Submit button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 14,
+  "line": 8,
+  "name": "User see message : \"\u003cmessage\u003e\"",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 9,
+  "name": "",
+  "description": "",
+  "id": "using-examples;checking-age-functionality-using-examples;",
+  "rows": [
+    {
+      "cells": [
+        "name",
+        "age",
+        "message"
+      ],
+      "line": 10,
+      "id": "using-examples;checking-age-functionality-using-examples;;1"
+    },
+    {
+      "cells": [
+        "Nancy",
+        "26",
+        "Hello, Nancy, you are an adult"
+      ],
+      "line": 11,
+      "id": "using-examples;checking-age-functionality-using-examples;;2"
+    },
+    {
+      "cells": [
+        "Robin",
+        "5",
+        "Hello, Robin, you are a kid"
+      ],
+      "line": 12,
+      "id": "using-examples;checking-age-functionality-using-examples;;3"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 2522724200,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 11,
+  "name": "checking Age functionality using examples",
+  "description": "",
+  "id": "using-examples;checking-age-functionality-using-examples;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 4,
+  "name": "User navigates to Age Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 5,
+  "name": "User enter name : \"Nancy\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 6,
+  "name": "User enter age : \"26\"",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 7,
+  "name": "Click on Submit button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
   "name": "User see message : \"Hello, Nancy, you are an adult\"",
+  "matchedColumns": [
+    2
+  ],
   "keyword": "Then "
 });
 formatter.match({
   "location": "SampleSteps2.user_navigates_to_Age_Page()"
 });
 formatter.result({
-  "duration": 1893273700,
+  "duration": 1560724800,
   "status": "passed"
 });
 formatter.match({
@@ -112,27 +138,27 @@ formatter.match({
   "location": "SampleSteps2.user_enter_name(String)"
 });
 formatter.result({
-  "duration": 206716500,
+  "duration": 214004800,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "29",
-      "offset": 17
+      "val": "26",
+      "offset": 18
     }
   ],
-  "location": "SampleSteps2.userEnterAge(int)"
+  "location": "SampleSteps2.userEnterAge(String)"
 });
 formatter.result({
-  "duration": 112183400,
+  "duration": 97293400,
   "status": "passed"
 });
 formatter.match({
   "location": "SampleSteps2.click_on_Submit_button()"
 });
 formatter.result({
-  "duration": 228653300,
+  "duration": 223692800,
   "status": "passed"
 });
 formatter.match({
@@ -145,11 +171,114 @@ formatter.match({
   "location": "SampleSteps2.user_see_message(String)"
 });
 formatter.result({
-  "duration": 59529300,
+  "duration": 50057600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3296478400,
+  "duration": 3322176500,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1643703300,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 12,
+  "name": "checking Age functionality using examples",
+  "description": "",
+  "id": "using-examples;checking-age-functionality-using-examples;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 4,
+  "name": "User navigates to Age Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 5,
+  "name": "User enter name : \"Robin\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 6,
+  "name": "User enter age : \"5\"",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 7,
+  "name": "Click on Submit button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "User see message : \"Hello, Robin, you are a kid\"",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SampleSteps2.user_navigates_to_Age_Page()"
+});
+formatter.result({
+  "duration": 1689485200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Robin",
+      "offset": 19
+    }
+  ],
+  "location": "SampleSteps2.user_enter_name(String)"
+});
+formatter.result({
+  "duration": 178576000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 18
+    }
+  ],
+  "location": "SampleSteps2.userEnterAge(String)"
+});
+formatter.result({
+  "duration": 94579800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SampleSteps2.click_on_Submit_button()"
+});
+formatter.result({
+  "duration": 220751200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Hello, Robin, you are a kid",
+      "offset": 20
+    }
+  ],
+  "location": "SampleSteps2.user_see_message(String)"
+});
+formatter.result({
+  "duration": 42346900,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3382227300,
   "status": "passed"
 });
 });

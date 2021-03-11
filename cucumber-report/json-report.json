@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2807552500,
+              "duration": 2522724200,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 4,
-        "name": "Navigate to the Link Page",
+        "line": 11,
+        "name": "checking Age functionality using examples",
         "description": "",
-        "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.;navigate-to-the-link-page",
+        "id": "using-examples;checking-age-functionality-using-examples;;2",
         "after": [
           {
             "result": {
-              "duration": 3380697001,
+              "duration": 3322176500,
               "status": "passed"
             },
             "match": {
@@ -30,76 +30,14 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 872592000,
+              "duration": 1560724800,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user navigates to Link Page",
-            "match": {
-              "location": "SampleSteps2.user_navigates_to_Link_Page()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 11423999,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user should verify the page is opened correctly",
-            "match": {
-              "location": "SampleSteps2.user_should_verify_the_page_is_opened_correctly()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@LinkScenario"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 1565165600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.openBrowser()"
-            }
-          }
-        ],
-        "line": 9,
-        "name": "Check Age page functionality",
-        "description": "",
-        "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.;check-age-page-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 3296478400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.embedScreenshot(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1893273700,
-              "status": "passed"
-            },
-            "line": 10,
+            "line": 4,
             "name": "User navigates to Age Page",
             "match": {
               "location": "SampleSteps2.user_navigates_to_Age_Page()"
@@ -108,10 +46,10 @@
           },
           {
             "result": {
-              "duration": 206716500,
+              "duration": 214004800,
               "status": "passed"
             },
-            "line": 11,
+            "line": 5,
             "name": "User enter name : \"Nancy\"",
             "match": {
               "arguments": [
@@ -122,32 +60,38 @@
               ],
               "location": "SampleSteps2.user_enter_name(String)"
             },
+            "matchedColumns": [
+              0
+            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 112183400,
+              "duration": 97293400,
               "status": "passed"
             },
-            "line": 12,
-            "name": "User enter age : 29",
+            "line": 6,
+            "name": "User enter age : \"26\"",
             "match": {
               "arguments": [
                 {
-                  "val": "29",
-                  "offset": 17
+                  "val": "26",
+                  "offset": 18
                 }
               ],
-              "location": "SampleSteps2.userEnterAge(int)"
+              "location": "SampleSteps2.userEnterAge(String)"
             },
+            "matchedColumns": [
+              1
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 228653300,
+              "duration": 223692800,
               "status": "passed"
             },
-            "line": 13,
+            "line": 7,
             "name": "Click on Submit button",
             "match": {
               "location": "SampleSteps2.click_on_Submit_button()"
@@ -156,10 +100,10 @@
           },
           {
             "result": {
-              "duration": 59529300,
+              "duration": 50057600,
               "status": "passed"
             },
-            "line": 14,
+            "line": 8,
             "name": "User see message : \"Hello, Nancy, you are an adult\"",
             "match": {
               "arguments": [
@@ -170,21 +114,137 @@
               ],
               "location": "SampleSteps2.user_see_message(String)"
             },
+            "matchedColumns": [
+              2
+            ],
             "keyword": "Then "
           }
-        ],
-        "tags": [
+        ]
+      },
+      {
+        "before": [
           {
+            "result": {
+              "duration": 1643703300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "checking Age functionality using examples",
+        "description": "",
+        "id": "using-examples;checking-age-functionality-using-examples;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 3382227300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1689485200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User navigates to Age Page",
+            "match": {
+              "location": "SampleSteps2.user_navigates_to_Age_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 178576000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User enter name : \"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Robin",
+                  "offset": 19
+                }
+              ],
+              "location": "SampleSteps2.user_enter_name(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94579800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enter age : \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 18
+                }
+              ],
+              "location": "SampleSteps2.userEnterAge(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 220751200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Click on Submit button",
+            "match": {
+              "location": "SampleSteps2.click_on_Submit_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42346900,
+              "status": "passed"
+            },
             "line": 8,
-            "name": "@AgePageScenario"
+            "name": "User see message : \"Hello, Robin, you are a kid\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hello, Robin, you are a kid",
+                  "offset": 20
+                }
+              ],
+              "location": "SampleSteps2.user_see_message(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "As a Test Engineer I want to be able to create simple scenarios.",
+    "name": "Using Examples",
     "description": "",
-    "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.",
+    "id": "using-examples",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/Sample2.feature"
+    "uri": "src/test/resources/features/Sample3.feature"
   }
 ]
