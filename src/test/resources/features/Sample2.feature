@@ -12,3 +12,13 @@ Feature: Introduction to Cucumber
       And User enter age : 26
       And click on Submit button
       Then User see message : "Hello, Sandra, you are an adult"
+
+@AgeScenario2
+  Scenario: Check Age page functionality
+    Given user navigates to Age Page
+    When user enter name : "Ann"
+    And User enter age : 5
+    And click on Submit button
+    Then User see message : "Hello, Ann, you are a kid"
+
+
