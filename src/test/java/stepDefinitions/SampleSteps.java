@@ -99,7 +99,7 @@ public class SampleSteps {
         driver.get("https://kristinek.github.io/site/examples/age.html");
     }
 
-    @Then("^user enter name : \"([^\"]*)\"$")
+    @When("^user enter name : \"([^\"]*)\"$")
     public void user_enter_name(String arg1) throws Throwable {
         WebElement nameText = driver.findElement(By.name("name"));
         nameText.clear();
