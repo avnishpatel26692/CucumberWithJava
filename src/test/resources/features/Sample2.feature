@@ -2,6 +2,7 @@ Feature: Introduction to cucumber
   Some sample text here (definitions or stuff like that)
 
 
+
   Scenario: Navigate to Link Page
     When User navigates to Link Page
     Then user should verify page is opened correctly
