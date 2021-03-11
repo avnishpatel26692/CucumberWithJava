@@ -8,3 +8,10 @@ Feature: Introduction to cucumber part 1
     Then I should see home page header
     And I should see home page description
     And I should see menu
+
+    Scenario: Simple Scenario 1
+      Given  user open facebook page
+      When user enters username and password
+      And user clicks on login button
+      Then user should be logged in successfully
+      And user is on the home page
