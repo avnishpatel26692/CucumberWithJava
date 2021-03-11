@@ -148,6 +148,64 @@ public class SampleSteps {
         Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
     }
 
+    @Given("^navigate to AgePage$")
+    public void navigateToAgePage() {
+        driver.get("https://kristinek.github.io/site/examples/age");
+    }
+
+
+    @When("^enter name : \"([^\"]*)\"$")
+    public void enterName(String arg1) throws Throwable {
+        WebElement nameText = driver.findElement(By.id("name"));
+        nameText.clear();
+        nameText.sendKeys(arg1);
+
+    }
+
+    @And("^enter age : \"([^\"]*)\"$")
+    public void enterAge(int arg1) throws Throwable {
+        WebElement ageText = driver.findElement(By.id("age"));
+        ageText.sendKeys("" + arg1);
+    }
+
+    @And("^Click on submit$")
+    public void clickOnSubmit() {
+        driver.findElement(By.id("submit")).click();
+    }
+
+    @Then("^see message : \"([^\"]*)\"$")
+    public void seeMessage(String arg1) throws Throwable {
+        Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
+
+    }
+
+    @Given("^navigate to Page$")
+    public void navigateToPage() {
+        driver.get("https://kristinek.github.io/site/examples/age");
+    }
+
+    @When("^name : \"([^\"]*)\"$")
+    public void name(String arg1) throws Throwable {
+        WebElement nameText = driver.findElement(By.id("name"));
+        nameText.clear();
+        nameText.sendKeys(arg1);
+    }
+
+    @And("^age : \"([^\"]*)\"$")
+    public void age(int arg1) throws Throwable {
+        WebElement ageText = driver.findElement(By.id("age"));
+        ageText.sendKeys("" + arg1);
+    }
+
+    @And("^submit$")
+    public void submit() {
+        driver.findElement(By.id("submit")).click();
+    }
+
+    @Then("^message : \"([^\"]*)\"$")
+    public void message(String arg1) throws Throwable {
+        Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
+    }
 }
 
 
