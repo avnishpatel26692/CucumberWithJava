@@ -106,8 +106,8 @@ public class SampleSteps {
         nameText.sendKeys(arg1);
     }
 
-    @Then("^user enters age : (\\d+)$")
-    public void user_enters_age(int arg1) throws Throwable {
+    @Then("^user enters age : \"([^\"]*)\"$")
+    public void user_enters_age(String arg1) throws Throwable {
        WebElement nameText = driver.findElement(By.name("age"));
        nameText.sendKeys(""+arg1);
     }
