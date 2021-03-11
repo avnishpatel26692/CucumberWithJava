@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="13.730836">
-<testcase classname="" name="Navigate to the Link Page" time="6.692791">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="14.434266">
+<testcase classname="As a Test Engineer I want to be able to create simple scenarios." name="Navigate to the Link Page" time="7.072266">
 <system-out><![CDATA[When user navigates to Link Page............................................passed
 Then user should verify the page is opened correctly........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="" name="Check Age page functionality" time="7.038045">
+<testcase classname="As a Test Engineer I want to be able to create simple scenarios." name="Check Age page functionality" time="7.362">
 <system-out><![CDATA[Given User navigates to Age Page............................................passed
 When User enter name : "Nancy"..............................................passed
-And User enter age : "29"...................................................passed
+And User enter age : 29.....................................................passed
 And Click on Submit button..................................................passed
 Then User see message : "Hello, Nancy, you are an adult"....................passed
 ]]></system-out>

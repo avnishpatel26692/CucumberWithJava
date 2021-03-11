@@ -9,6 +9,6 @@ Feature: As a Test Engineer I want to be able to create simple scenarios.
   Scenario: Check Age page functionality
     Given User navigates to Age Page
     When User enter name : "Nancy"
-    And User enter age : "29"
+    And User enter age : 29
     And Click on Submit button
     Then User see message : "Hello, Nancy, you are an adult"

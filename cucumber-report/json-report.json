@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2316872200,
+              "duration": 2807552500,
               "status": "passed"
             },
             "match": {
@@ -17,11 +17,11 @@
         "line": 4,
         "name": "Navigate to the Link Page",
         "description": "",
-        "id": ";navigate-to-the-link-page",
+        "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.;navigate-to-the-link-page",
         "after": [
           {
             "result": {
-              "duration": 3280696300,
+              "duration": 3380697001,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1082335300,
+              "duration": 872592000,
               "status": "passed"
             },
             "line": 5,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 12887600,
+              "duration": 11423999,
               "status": "passed"
             },
             "line": 6,
@@ -68,7 +68,7 @@
         "before": [
           {
             "result": {
-              "duration": 1686841200,
+              "duration": 1565165600,
               "status": "passed"
             },
             "match": {
@@ -79,11 +79,11 @@
         "line": 9,
         "name": "Check Age page functionality",
         "description": "",
-        "id": ";check-age-page-functionality",
+        "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.;check-age-page-functionality",
         "after": [
           {
             "result": {
-              "duration": 3251300300,
+              "duration": 3296478400,
               "status": "passed"
             },
             "match": {
@@ -96,7 +96,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1558629000,
+              "duration": 1893273700,
               "status": "passed"
             },
             "line": 10,
@@ -108,7 +108,7 @@
           },
           {
             "result": {
-              "duration": 203806600,
+              "duration": 206716500,
               "status": "passed"
             },
             "line": 11,
@@ -126,25 +126,25 @@
           },
           {
             "result": {
-              "duration": 98286399,
+              "duration": 112183400,
               "status": "passed"
             },
             "line": 12,
-            "name": "User enter age : \"29\"",
+            "name": "User enter age : 29",
             "match": {
               "arguments": [
                 {
                   "val": "29",
-                  "offset": 18
+                  "offset": 17
                 }
               ],
-              "location": "SampleSteps2.user_enter_age(String)"
+              "location": "SampleSteps2.userEnterAge(int)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 201657900,
+              "duration": 228653300,
               "status": "passed"
             },
             "line": 13,
@@ -156,7 +156,7 @@
           },
           {
             "result": {
-              "duration": 37523301,
+              "duration": 59529300,
               "status": "passed"
             },
             "line": 14,
@@ -181,9 +181,9 @@
         ]
       }
     ],
-    "name": "",
+    "name": "As a Test Engineer I want to be able to create simple scenarios.",
     "description": "",
-    "id": "",
+    "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.",
     "keyword": "Feature",
     "uri": "src/test/resources/features/Sample2.feature"
   }

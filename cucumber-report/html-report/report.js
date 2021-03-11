@@ -1,20 +1,20 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Sample2.feature");
 formatter.feature({
   "line": 1,
-  "name": "",
+  "name": "As a Test Engineer I want to be able to create simple scenarios.",
   "description": "",
-  "id": "",
+  "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 2316872200,
+  "duration": 2807552500,
   "status": "passed"
 });
 formatter.scenario({
   "line": 4,
   "name": "Navigate to the Link Page",
   "description": "",
-  "id": ";navigate-to-the-link-page",
+  "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.;navigate-to-the-link-page",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -38,29 +38,29 @@ formatter.match({
   "location": "SampleSteps2.user_navigates_to_Link_Page()"
 });
 formatter.result({
-  "duration": 1082335300,
+  "duration": 872592000,
   "status": "passed"
 });
 formatter.match({
   "location": "SampleSteps2.user_should_verify_the_page_is_opened_correctly()"
 });
 formatter.result({
-  "duration": 12887600,
+  "duration": 11423999,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3280696300,
+  "duration": 3380697001,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1686841200,
+  "duration": 1565165600,
   "status": "passed"
 });
 formatter.scenario({
   "line": 9,
   "name": "Check Age page functionality",
   "description": "",
-  "id": ";check-age-page-functionality",
+  "id": "as-a-test-engineer-i-want-to-be-able-to-create-simple-scenarios.;check-age-page-functionality",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -82,7 +82,7 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "User enter age : \"29\"",
+  "name": "User enter age : 29",
   "keyword": "And "
 });
 formatter.step({
@@ -99,7 +99,7 @@ formatter.match({
   "location": "SampleSteps2.user_navigates_to_Age_Page()"
 });
 formatter.result({
-  "duration": 1558629000,
+  "duration": 1893273700,
   "status": "passed"
 });
 formatter.match({
@@ -112,27 +112,27 @@ formatter.match({
   "location": "SampleSteps2.user_enter_name(String)"
 });
 formatter.result({
-  "duration": 203806600,
+  "duration": 206716500,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "29",
-      "offset": 18
+      "offset": 17
     }
   ],
-  "location": "SampleSteps2.user_enter_age(String)"
+  "location": "SampleSteps2.userEnterAge(int)"
 });
 formatter.result({
-  "duration": 98286399,
+  "duration": 112183400,
   "status": "passed"
 });
 formatter.match({
   "location": "SampleSteps2.click_on_Submit_button()"
 });
 formatter.result({
-  "duration": 201657900,
+  "duration": 228653300,
   "status": "passed"
 });
 formatter.match({
@@ -145,11 +145,11 @@ formatter.match({
   "location": "SampleSteps2.user_see_message(String)"
 });
 formatter.result({
-  "duration": 37523301,
+  "duration": 59529300,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3251300300,
+  "duration": 3296478400,
   "status": "passed"
 });
 });
