@@ -119,6 +119,13 @@ public class SampleSteps {
     public void user2_receives_Hello_message(int arg1) throws Throwable {
         Assert.assertEquals("Hello, Emils, you are a kid",driver.findElement(By.id("message")).getText());
     }
+////////////////////////////////////////////////////////////
+@Then("^User receives Hello message : \"([^\"]*)\"$")
+public void user_receives_Hello_message(String arg1) throws Throwable {
+    Assert.assertEquals(arg1 ,driver.findElement(By.id("message")).getText());
+
+}
+
 
 }
 
