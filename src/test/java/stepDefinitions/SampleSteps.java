@@ -125,7 +125,7 @@ public class SampleSteps {
     @When("^I enter number: \"([^\"]*)\"$")
     public void i_enter_number(String arg1) throws Throwable {
         WebElement entNumber = driver.findElement(By.id("numb"));
-        entNumber.sendKeys(" "+arg1);
+        entNumber.sendKeys(arg1);
     }
 
     @When("^I click submit number$")

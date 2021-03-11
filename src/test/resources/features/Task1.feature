@@ -17,4 +17,4 @@ Feature: Testing error cases and correct number case
     Given I am on number page
     When I enter number: "64"
     And I click submit number
-    Then I see a new message: "Square root of  64 is 8.00"
+    Then I see a new message: "Square root of 64 is 8.00"
