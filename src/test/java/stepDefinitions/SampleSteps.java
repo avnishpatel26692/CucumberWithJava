@@ -88,6 +88,37 @@ public class SampleSteps {
         Assert.assertEquals(arg1,driver.findElement(By.id("message")).getText());
     }
 
+    @Given("^I am on number page$")
+    public void i_am_on_number_page() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @When("^I enter number: \"([^\"]*)\"$")
+    public void i_enter_number(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @When("^I click submit number$")
+    public void i_click_submit_number() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^I see a message: \"([^\"]*)\"$")
+    public void i_see_a_message(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^I see a new message: \"([^\"]*)\"$")
+    public void i_see_a_new_message(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+
 
 
 
