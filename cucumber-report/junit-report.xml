@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="5.499964">
+<testcase classname="Introduction to cucumber part 2" name="Simple scenario 3 - Check Age page functionality" time="5.499964">
+<system-out><![CDATA[Given User navigates to Age page............................................passed
+When User enters name : "Egils".............................................passed
+And User enters age : "27"..................................................passed
+And User clicks on Submit button............................................passed
+Then User receives Hello message............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
