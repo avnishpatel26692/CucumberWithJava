@@ -125,6 +125,55 @@ public void user_receives_Hello_message(String arg1) throws Throwable {
     Assert.assertEquals(arg1 ,driver.findElement(By.id("message")).getText());
 
 }
+//////////////////TASK1/////////////////////////////////////
+@Given("^I am on number page$")
+public void i_am_on_number_page() throws Throwable {
+    driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
+}
+
+    @When("^I enter number: dad$")
+    public void i_enter_number_dad() throws Throwable {
+        driver.findElement(By.id("numb")).sendKeys("dad");
+    }
+
+    @When("^I click submit number$")
+    public void i_click_submit_number() throws Throwable {
+        driver.findElement(By.className("w3-btn")).click();
+    }
+
+    @Then("^I see a message: Please enter a number$")
+    public void i_see_a_message_Please_enter_a_number() throws Throwable {
+            String errorMessage = driver.findElement(By.id("ch1_error")).getText();
+            Assert.assertEquals("Please enter a number",errorMessage);
+    }
+
+    @When("^I enter number: (\\d+)$")
+    public void i_enter_number(int arg1) throws Throwable {
+        driver.findElement(By.id("numb")).sendKeys(""+arg1);
+    }
+
+    @Then("^I see a message: Number is too big$")
+    public void i_see_a_message_Number_is_too_big() throws Throwable {
+        String errorMessage = driver.findElement(By.id("ch1_error")).getText();
+        Assert.assertEquals("Number is too big",errorMessage);
+    }
+
+    @Then("^I see a message: Number is too small$")
+    public void i_see_a_message_Number_is_too_small() throws Throwable {
+        String errorMessage = driver.findElement(By.id("ch1_error")).getText();
+        Assert.assertEquals("Number is too small",errorMessage);
+    }
+
+    @When("^I enter number: \"([^\"]*)\"$")
+    public void i_enter_number(String arg1) throws Throwable {
+        driver.findElement(By.id("numb")).sendKeys(""+arg1);
+    }
+
+    @Then("^I see a new message: \"([^\"]*)\"$")
+    public void i_see_a_new_message(String arg1) throws Throwable {
+        String errorMessage = driver.switchTo().alert().getText();
+        Assert.assertEquals("Square root of 64 is 8.00",errorMessage);
+    }
 
 
 }
