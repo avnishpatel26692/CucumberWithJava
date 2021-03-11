@@ -47,6 +47,8 @@ public class SampleSteps {
     public void iShouldSeeMenu() throws Throwable {
         assertTrue(driver.findElement(By.className("w3-navbar")).isDisplayed());
     }
+
+
 }
 
 
