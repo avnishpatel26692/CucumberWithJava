@@ -58,23 +58,28 @@ public class SampleSteps {
     public void user_should_verify_page_is_opened_correctly() throws Throwable {
         Assert.assertEquals("Lorem ipsum",driver.findElement(By.xpath("//h1[text()='Lorem ipsum']")).getText());
     }
-    @Given("^user navigates to Age Page$")
+    @Given("^User navigates to Age Page$")
     public void user_navigates_to_Age_Page() throws Throwable {
         driver.get("https://kristinek.github.io/site/examples/age");
     }
 
-    @When("^user enter name : \"([^\"]*)\"$")
+    @When("^User enter name : \"([^\"]*)\"$")
     public void user_enter_name(String arg1) throws Throwable {
         WebElement nameText = driver.findElement(By.id("name"));
         nameText.clear();
         nameText.sendKeys(arg1);
     }
 
-    @When("^User enter age : (\\d+)$") //this one is for Integer
-//    @When("^user enter age : \"([^\"]*)\"$") - this is for Strings
-    public void user_enter_age(int arg1) throws Throwable {
+//    @When("^User enter age : (\\d+)$") //this one is for Integer
+//    public void user_enter_age(int arg1) throws Throwable {
+//        WebElement ageText = driver.findElement(By.name("age"));
+//        ageText.sendKeys(""+arg1);
+//    }
+
+    @When("^User enter age : \"([^\"]*)\"$") //this is for Strings
+    public void user_enter_age(String arg1) throws Throwable {
         WebElement ageText = driver.findElement(By.name("age"));
-        ageText.sendKeys(""+arg1);
+        ageText.sendKeys(arg1);
     }
 
     @When("^click on Submit button$")
