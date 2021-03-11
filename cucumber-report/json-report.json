@@ -6,126 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2522724200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.openBrowser()"
-            }
-          }
-        ],
-        "line": 11,
-        "name": "checking Age functionality using examples",
-        "description": "",
-        "id": "using-examples;checking-age-functionality-using-examples;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 3322176500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.embedScreenshot(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1560724800,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "User navigates to Age Page",
-            "match": {
-              "location": "SampleSteps2.user_navigates_to_Age_Page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 214004800,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "User enter name : \"Nancy\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Nancy",
-                  "offset": 19
-                }
-              ],
-              "location": "SampleSteps2.user_enter_name(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 97293400,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "User enter age : \"26\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "26",
-                  "offset": 18
-                }
-              ],
-              "location": "SampleSteps2.userEnterAge(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 223692800,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "Click on Submit button",
-            "match": {
-              "location": "SampleSteps2.click_on_Submit_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 50057600,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "User see message : \"Hello, Nancy, you are an adult\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Hello, Nancy, you are an adult",
-                  "offset": 20
-                }
-              ],
-              "location": "SampleSteps2.user_see_message(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 1643703300,
+              "duration": 2149670400,
               "status": "passed"
             },
             "match": {
@@ -134,13 +15,13 @@
           }
         ],
         "line": 12,
-        "name": "checking Age functionality using examples",
+        "name": "Testing error cases",
         "description": "",
-        "id": "using-examples;checking-age-functionality-using-examples;;3",
+        "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;2",
         "after": [
           {
             "result": {
-              "duration": 3382227300,
+              "duration": 3803014000,
               "status": "passed"
             },
             "match": {
@@ -153,31 +34,31 @@
         "steps": [
           {
             "result": {
-              "duration": 1689485200,
+              "duration": 1027436800,
               "status": "passed"
             },
-            "line": 4,
-            "name": "User navigates to Age Page",
+            "line": 6,
+            "name": "I am on number page",
             "match": {
-              "location": "SampleSteps2.user_navigates_to_Age_Page()"
+              "location": "Task1Steps.i_am_on_number_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 178576000,
+              "duration": 159513300,
               "status": "passed"
             },
-            "line": 5,
-            "name": "User enter name : \"Robin\"",
+            "line": 7,
+            "name": "I enter number: \"dad\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Robin",
-                  "offset": 19
+                  "val": "dad",
+                  "offset": 17
                 }
               ],
-              "location": "SampleSteps2.user_enter_name(String)"
+              "location": "Task1Steps.i_enter_number(String)"
             },
             "matchedColumns": [
               0
@@ -186,65 +67,356 @@
           },
           {
             "result": {
-              "duration": 94579800,
+              "duration": 70220700,
               "status": "passed"
             },
-            "line": 6,
-            "name": "User enter age : \"5\"",
+            "line": 8,
+            "name": "I click submit number",
+            "match": {
+              "location": "Task1Steps.i_click_submit_number()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52273300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I see a message: \"Please enter a number\"",
             "match": {
               "arguments": [
                 {
-                  "val": "5",
+                  "val": "Please enter a number",
                   "offset": 18
                 }
               ],
-              "location": "SampleSteps2.userEnterAge(String)"
+              "location": "Task1Steps.i_see_a_message(String)"
             },
             "matchedColumns": [
               1
             ],
-            "keyword": "And "
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@Scenario1"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1414260300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Testing error cases",
+        "description": "",
+        "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 3191597800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1073443000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on number page",
+            "match": {
+              "location": "Task1Steps.i_am_on_number_page()"
+            },
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 220751200,
+              "duration": 137736500,
               "status": "passed"
             },
             "line": 7,
-            "name": "Click on Submit button",
+            "name": "I enter number: \"101\"",
             "match": {
-              "location": "SampleSteps2.click_on_Submit_button()"
+              "arguments": [
+                {
+                  "val": "101",
+                  "offset": 17
+                }
+              ],
+              "location": "Task1Steps.i_enter_number(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 68733000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click submit number",
+            "match": {
+              "location": "Task1Steps.i_click_submit_number()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 42346900,
+              "duration": 37769900,
               "status": "passed"
             },
-            "line": 8,
-            "name": "User see message : \"Hello, Robin, you are a kid\"",
+            "line": 9,
+            "name": "I see a message: \"Number is too big\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Hello, Robin, you are a kid",
-                  "offset": 20
+                  "val": "Number is too big",
+                  "offset": 18
                 }
               ],
-              "location": "SampleSteps2.user_see_message(String)"
+              "location": "Task1Steps.i_see_a_message(String)"
             },
             "matchedColumns": [
-              2
+              1
             ],
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@Scenario1"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1521746600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Testing error cases",
+        "description": "",
+        "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 3313878900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 954221800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on number page",
+            "match": {
+              "location": "Task1Steps.i_am_on_number_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 160216600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter number: \"45\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "45",
+                  "offset": 17
+                }
+              ],
+              "location": "Task1Steps.i_enter_number(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 87941800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click submit number",
+            "match": {
+              "location": "Task1Steps.i_click_submit_number()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 40772200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I see a message: \"Number is too small\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Number is too small",
+                  "offset": 18
+                }
+              ],
+              "location": "Task1Steps.i_see_a_message(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@Scenario1"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1362741200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Testing correct numbers",
+        "description": "",
+        "id": "testing-error-cases-and-correct-number-case;testing-correct-numbers",
+        "after": [
+          {
+            "result": {
+              "duration": 3310806300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1062693300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I am on number page",
+            "match": {
+              "location": "Task1Steps.i_am_on_number_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 126669500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I enter number: \"64\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "64",
+                  "offset": 17
+                }
+              ],
+              "location": "Task1Steps.i_enter_number(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 69883500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I click submit number",
+            "match": {
+              "location": "Task1Steps.i_click_submit_number()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10032900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I see a new message: \"Square root of 64 is 8.00\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Square root of 64 is 8.00",
+                  "offset": 22
+                }
+              ],
+              "location": "Task1Steps.i_see_a_new_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 15,
+            "name": "@Scenario2"
           }
         ]
       }
     ],
-    "name": "Using Examples",
+    "name": "Testing error cases and correct number case",
     "description": "",
-    "id": "using-examples",
+    "id": "testing-error-cases-and-correct-number-case",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/Sample3.feature"
+    "uri": "src/test/resources/features/Task1.feature"
   }
 ]

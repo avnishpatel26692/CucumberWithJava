@@ -1,18 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="15.242344">
-<testcase classname="Using Examples" name="checking Age functionality using examples" time="7.990674">
-<system-out><![CDATA[Given User navigates to Age Page............................................passed
-When User enter name : "Nancy"..............................................passed
-And User enter age : "26"...................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, Nancy, you are an adult"....................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="25.207274">
+<testcase classname="Testing error cases and correct number case" name="Testing error cases" time="7.262129">
+<system-out><![CDATA[Given I am on number page...................................................passed
+When I enter number: "dad"..................................................passed
+And I click submit number...................................................passed
+Then I see a message: "Please enter a number"...............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Using Examples" name="checking Age functionality using examples 2" time="7.25167">
-<system-out><![CDATA[Given User navigates to Age Page............................................passed
-When User enter name : "Robin"..............................................passed
-And User enter age : "5"....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, Robin, you are a kid".......................passed
+<testcase classname="Testing error cases and correct number case" name="Testing error cases 2" time="5.92354">
+<system-out><![CDATA[Given I am on number page...................................................passed
+When I enter number: "101"..................................................passed
+And I click submit number...................................................passed
+Then I see a message: "Number is too big"...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing error cases and correct number case" name="Testing error cases 3" time="6.078778">
+<system-out><![CDATA[Given I am on number page...................................................passed
+When I enter number: "45"...................................................passed
+And I click submit number...................................................passed
+Then I see a message: "Number is too small".................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing error cases and correct number case" name="Testing correct numbers" time="5.942827">
+<system-out><![CDATA[Given I am on number page...................................................passed
+When I enter number: "64"...................................................passed
+And I click submit number...................................................passed
+Then I see a new message: "Square root of 64 is 8.00".......................passed
 ]]></system-out>
 </testcase>
 </testsuite>

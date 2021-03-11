@@ -1,284 +1,436 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Sample3.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Task1.feature");
 formatter.feature({
   "line": 1,
-  "name": "Using Examples",
+  "name": "Testing error cases and correct number case",
   "description": "",
-  "id": "using-examples",
+  "id": "testing-error-cases-and-correct-number-case",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 3,
-  "name": "checking Age functionality using examples",
-  "description": "",
-  "id": "using-examples;checking-age-functionality-using-examples",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 4,
-  "name": "User navigates to Age Page",
-  "keyword": "Given "
-});
-formatter.step({
+  "comments": [
+    {
+      "line": 2,
+      "value": "#https://kristinek.github.io/site/tasks/enter_a_number"
+    }
+  ],
   "line": 5,
-  "name": "User enter name : \"\u003cname\u003e\"",
-  "keyword": "When "
+  "name": "Testing error cases",
+  "description": "",
+  "id": "testing-error-cases-and-correct-number-case;testing-error-cases",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 4,
+      "name": "@Scenario1"
+    }
+  ]
 });
 formatter.step({
   "line": 6,
-  "name": "User enter age : \"\u003cage\u003e\"",
-  "keyword": "And "
+  "name": "I am on number page",
+  "keyword": "Given "
 });
 formatter.step({
   "line": 7,
-  "name": "Click on Submit button",
-  "keyword": "And "
+  "name": "I enter number: \"\u003cnumber\u003e\"",
+  "keyword": "When "
 });
 formatter.step({
   "line": 8,
-  "name": "User see message : \"\u003cmessage\u003e\"",
+  "name": "I click submit number",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "I see a message: \"\u003cerrorMessage\u003e\"",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 9,
+  "line": 10,
   "name": "",
   "description": "",
-  "id": "using-examples;checking-age-functionality-using-examples;",
+  "id": "testing-error-cases-and-correct-number-case;testing-error-cases;",
   "rows": [
     {
       "cells": [
-        "name",
-        "age",
-        "message"
-      ],
-      "line": 10,
-      "id": "using-examples;checking-age-functionality-using-examples;;1"
-    },
-    {
-      "cells": [
-        "Nancy",
-        "26",
-        "Hello, Nancy, you are an adult"
+        "number",
+        "errorMessage"
       ],
       "line": 11,
-      "id": "using-examples;checking-age-functionality-using-examples;;2"
+      "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;1"
     },
     {
       "cells": [
-        "Robin",
-        "5",
-        "Hello, Robin, you are a kid"
+        "dad",
+        "Please enter a number"
       ],
       "line": 12,
-      "id": "using-examples;checking-age-functionality-using-examples;;3"
+      "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;2"
+    },
+    {
+      "cells": [
+        "101",
+        "Number is too big"
+      ],
+      "line": 13,
+      "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;3"
+    },
+    {
+      "cells": [
+        "45",
+        "Number is too small"
+      ],
+      "line": 14,
+      "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;4"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 2522724200,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 11,
-  "name": "checking Age functionality using examples",
-  "description": "",
-  "id": "using-examples;checking-age-functionality-using-examples;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 4,
-  "name": "User navigates to Age Page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 5,
-  "name": "User enter name : \"Nancy\"",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 6,
-  "name": "User enter age : \"26\"",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 7,
-  "name": "Click on Submit button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "User see message : \"Hello, Nancy, you are an adult\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "SampleSteps2.user_navigates_to_Age_Page()"
-});
-formatter.result({
-  "duration": 1560724800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Nancy",
-      "offset": 19
-    }
-  ],
-  "location": "SampleSteps2.user_enter_name(String)"
-});
-formatter.result({
-  "duration": 214004800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "26",
-      "offset": 18
-    }
-  ],
-  "location": "SampleSteps2.userEnterAge(String)"
-});
-formatter.result({
-  "duration": 97293400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "SampleSteps2.click_on_Submit_button()"
-});
-formatter.result({
-  "duration": 223692800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Hello, Nancy, you are an adult",
-      "offset": 20
-    }
-  ],
-  "location": "SampleSteps2.user_see_message(String)"
-});
-formatter.result({
-  "duration": 50057600,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3322176500,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1643703300,
+  "duration": 2149670400,
   "status": "passed"
 });
 formatter.scenario({
   "line": 12,
-  "name": "checking Age functionality using examples",
+  "name": "Testing error cases",
   "description": "",
-  "id": "using-examples;checking-age-functionality-using-examples;;3",
+  "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;2",
   "type": "scenario",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 4,
+      "name": "@Scenario1"
+    }
+  ]
 });
 formatter.step({
-  "line": 4,
-  "name": "User navigates to Age Page",
+  "line": 6,
+  "name": "I am on number page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 5,
-  "name": "User enter name : \"Robin\"",
+  "line": 7,
+  "name": "I enter number: \"dad\"",
   "matchedColumns": [
     0
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 6,
-  "name": "User enter age : \"5\"",
+  "line": 8,
+  "name": "I click submit number",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "I see a message: \"Please enter a number\"",
   "matchedColumns": [
     1
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 7,
-  "name": "Click on Submit button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "User see message : \"Hello, Robin, you are a kid\"",
-  "matchedColumns": [
-    2
   ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "SampleSteps2.user_navigates_to_Age_Page()"
+  "location": "Task1Steps.i_am_on_number_page()"
 });
 formatter.result({
-  "duration": 1689485200,
+  "duration": 1027436800,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Robin",
-      "offset": 19
+      "val": "dad",
+      "offset": 17
     }
   ],
-  "location": "SampleSteps2.user_enter_name(String)"
+  "location": "Task1Steps.i_enter_number(String)"
 });
 formatter.result({
-  "duration": 178576000,
+  "duration": 159513300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Task1Steps.i_click_submit_number()"
+});
+formatter.result({
+  "duration": 70220700,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "5",
+      "val": "Please enter a number",
       "offset": 18
     }
   ],
-  "location": "SampleSteps2.userEnterAge(String)"
+  "location": "Task1Steps.i_see_a_message(String)"
 });
 formatter.result({
-  "duration": 94579800,
+  "duration": 52273300,
   "status": "passed"
 });
+formatter.after({
+  "duration": 3803014000,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1414260300,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "Testing error cases",
+  "description": "",
+  "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 4,
+      "name": "@Scenario1"
+    }
+  ]
+});
+formatter.step({
+  "line": 6,
+  "name": "I am on number page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "I enter number: \"101\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "I click submit number",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "I see a message: \"Number is too big\"",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "Then "
+});
 formatter.match({
-  "location": "SampleSteps2.click_on_Submit_button()"
+  "location": "Task1Steps.i_am_on_number_page()"
 });
 formatter.result({
-  "duration": 220751200,
+  "duration": 1073443000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Hello, Robin, you are a kid",
-      "offset": 20
+      "val": "101",
+      "offset": 17
     }
   ],
-  "location": "SampleSteps2.user_see_message(String)"
+  "location": "Task1Steps.i_enter_number(String)"
 });
 formatter.result({
-  "duration": 42346900,
+  "duration": 137736500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Task1Steps.i_click_submit_number()"
+});
+formatter.result({
+  "duration": 68733000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Number is too big",
+      "offset": 18
+    }
+  ],
+  "location": "Task1Steps.i_see_a_message(String)"
+});
+formatter.result({
+  "duration": 37769900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3382227300,
+  "duration": 3191597800,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1521746600,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 14,
+  "name": "Testing error cases",
+  "description": "",
+  "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;4",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 4,
+      "name": "@Scenario1"
+    }
+  ]
+});
+formatter.step({
+  "line": 6,
+  "name": "I am on number page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "I enter number: \"45\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "I click submit number",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "I see a message: \"Number is too small\"",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Task1Steps.i_am_on_number_page()"
+});
+formatter.result({
+  "duration": 954221800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "45",
+      "offset": 17
+    }
+  ],
+  "location": "Task1Steps.i_enter_number(String)"
+});
+formatter.result({
+  "duration": 160216600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Task1Steps.i_click_submit_number()"
+});
+formatter.result({
+  "duration": 87941800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Number is too small",
+      "offset": 18
+    }
+  ],
+  "location": "Task1Steps.i_see_a_message(String)"
+});
+formatter.result({
+  "duration": 40772200,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3313878900,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1362741200,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 16,
+  "name": "Testing correct numbers",
+  "description": "",
+  "id": "testing-error-cases-and-correct-number-case;testing-correct-numbers",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 15,
+      "name": "@Scenario2"
+    }
+  ]
+});
+formatter.step({
+  "line": 17,
+  "name": "I am on number page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 18,
+  "name": "I enter number: \"64\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 19,
+  "name": "I click submit number",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "I see a new message: \"Square root of 64 is 8.00\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Task1Steps.i_am_on_number_page()"
+});
+formatter.result({
+  "duration": 1062693300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "64",
+      "offset": 17
+    }
+  ],
+  "location": "Task1Steps.i_enter_number(String)"
+});
+formatter.result({
+  "duration": 126669500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Task1Steps.i_click_submit_number()"
+});
+formatter.result({
+  "duration": 69883500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Square root of 64 is 8.00",
+      "offset": 22
+    }
+  ],
+  "location": "Task1Steps.i_see_a_new_message(String)"
+});
+formatter.result({
+  "duration": 10032900,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3310806300,
   "status": "passed"
 });
 });

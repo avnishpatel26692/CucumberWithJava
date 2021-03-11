@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/Sample3.feature",//any number of feature files
+        features = "src/test/resources/features/Task1.feature",//any number of feature files
         plugin = {"pretty", "html:cucumber-report/html-report",
                 "junit:cucumber-report/junit-report.xml",
                 "json:cucumber-report/json-report.json"},
-        //tags = {"@LinkScenario", "@AgePageScenario"},
+        tags = {"@Scenario1, @Scenario2"},
         dryRun = false,
         glue = {"stepDefinitions"}
 )
