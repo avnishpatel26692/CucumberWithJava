@@ -89,6 +89,37 @@ public class SampleSteps {
     public void user_receives_Hello_message() throws Throwable {
         Assert.assertEquals("Hello, Egils, you are an adult",driver.findElement(By.id("message")).getText());
     }
+
+
+    @Given("^User(\\d+) navigates to Age page$")
+    public void user2_navigates_to_Age_page(int arg1) throws Throwable {
+        driver.get("https://kristinek.github.io/site/examples/age");
+        throw new PendingException();
+    }
+
+    @When("^User2 enters name : \"([^\"]*)\"$")
+    public void user2_enters_name(String arg2) throws Throwable {
+        WebElement nameText = driver.findElement(By.id("name"));
+        nameText.clear();
+        nameText.sendKeys(arg2);
+    }
+
+    @When("^User2 enters age : \"([^\"]*)\"$")
+    public void user2_enters_age(String arg2) throws Throwable {
+        WebElement ageText = driver.findElement(By.name("age"));
+        ageText.sendKeys(arg2);
+    }
+
+    @When("^User2 clicks on Submit button$")
+    public void user2_clicks_on_Submit_button(int arg1) throws Throwable {
+        driver.findElement(By.id("submit")).click();
+    }
+
+    @Then("^User2 receives Hello message$")
+    public void user2_receives_Hello_message(int arg1) throws Throwable {
+        Assert.assertEquals("Hello, Emils, you are a kid",driver.findElement(By.id("message")).getText());
+    }
+
 }
 
 

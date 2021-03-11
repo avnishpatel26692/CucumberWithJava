@@ -14,3 +14,10 @@ Feature: Introduction to cucumber part 2
     And User clicks on Submit button
     Then User receives Hello message
 
+  @AgeScenario2
+  Scenario: Simple scenario 4 - Check Age page functionality2
+    Given User2 navigates to Age page
+    When User2 enters name : "Emils"
+    And User2 enters age : "7"
+    And User2 clicks on Submit button
+    Then User2 receives Hello message

@@ -7,97 +7,100 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 1346115900,
+  "duration": 1340494900,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 10,
-  "name": "Simple scenario 3 - Check Age page functionality",
+  "line": 18,
+  "name": "Simple scenario 4 - Check Age page functionality2",
   "description": "",
-  "id": "introduction-to-cucumber-part-2;simple-scenario-3---check-age-page-functionality",
+  "id": "introduction-to-cucumber-part-2;simple-scenario-4---check-age-page-functionality2",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 9,
-      "name": "@AgeScenario"
+      "line": 17,
+      "name": "@AgeScenario2"
     }
   ]
 });
 formatter.step({
-  "line": 11,
-  "name": "User navigates to Age page",
+  "line": 19,
+  "name": "User2 navigates to Age page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 12,
-  "name": "User enters name : \"Egils\"",
+  "line": 20,
+  "name": "User2 enters name : \"Emils\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 13,
-  "name": "User enters age : \"27\"",
+  "line": 21,
+  "name": "User2 enters age : \"7\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 14,
-  "name": "User clicks on Submit button",
+  "line": 22,
+  "name": "User2 clicks on Submit button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
-  "name": "User receives Hello message",
+  "line": 23,
+  "name": "User2 receives Hello message",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "SampleSteps.user_navigates_to_Age_page()"
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 4
+    }
+  ],
+  "location": "SampleSteps.user2_navigates_to_Age_page(int)"
 });
 formatter.result({
-  "duration": 871226100,
-  "status": "passed"
+  "duration": 894823300,
+  "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat stepDefinitions.SampleSteps.user2_navigates_to_Age_page(SampleSteps.java:97)\r\n\tat ✽.Given User2 navigates to Age page(src/test/resources/features/Sample2.feature:19)\r\n",
+  "status": "pending"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Egils",
+      "val": "Emils",
+      "offset": 21
+    }
+  ],
+  "location": "SampleSteps.user2_enters_name(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "7",
       "offset": 20
     }
   ],
-  "location": "SampleSteps.user_enters_name(String)"
+  "location": "SampleSteps.user2_enters_age(String)"
 });
 formatter.result({
-  "duration": 69597800,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "27",
-      "offset": 19
-    }
-  ],
-  "location": "SampleSteps.user_enters_age(String)"
+  "location": "SampleSteps.user2_clicks_on_Submit_button(int)"
 });
 formatter.result({
-  "duration": 33923600,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
-  "location": "SampleSteps.user_clicks_on_Submit_button()"
+  "location": "SampleSteps.user2_receives_Hello_message(int)"
 });
 formatter.result({
-  "duration": 79723900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "SampleSteps.user_receives_Hello_message()"
-});
-formatter.result({
-  "duration": 17457100,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
-  "duration": 3081919900,
+  "duration": 3104557900,
   "status": "passed"
 });
 });
