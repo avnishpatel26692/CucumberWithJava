@@ -14,6 +14,7 @@ Feature: Introduction to cucumber
     And Click on Submit button
     Then User see message : "Hello, John, you are an adult"
 
+
   Scenario: Check Age page functionality
     Given User navigates to Age Page
     When User enter name : "Nancy"
