@@ -145,7 +145,7 @@ public class SampleSteps {
 
     @Then("^I see a new message: \"([^\"]*)\"$")
     public void i_see_a_new_message(String arg1) throws Throwable {
-        driver.switchTo().alert().getText();
+        Assert.assertEquals(arg1,driver.switchTo().alert().getText());
     }
 
 
