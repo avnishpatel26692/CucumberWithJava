@@ -1,23 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="15.657855">
-<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.451948">
-<system-out><![CDATA[Given I am on action page...................................................passed
-When I clicked on checkboxes:...............................................passed
-And I click the result checkbox button......................................passed
-Then message for checkboxes "You selected value(s): Option 1, Option 3" is seen.passed
-]]></system-out>
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="4" tests="4" time="16.915291">
+<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid" time="4.659859">
+<skipped><![CDATA[Given User navigates to Age Page............................................undefined
+When User enter details.....................................................skipped
+And Click on Submit button..................................................undefined
+Then User see message : "Hello, ABC, you are an adult"......................undefined
+]]></skipped>
 </testcase>
-<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.08491">
-<system-out><![CDATA[Given I am on action page...................................................passed
-When I clicked on checkboxes:...............................................passed
-And I click the result checkbox button......................................passed
-Then message for checkboxes "You selected value(s): Option 2" is seen.......passed
-]]></system-out>
+<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid 2" time="4.083431">
+<skipped><![CDATA[Given User navigates to Age Page............................................undefined
+When User enter details.....................................................skipped
+And Click on Submit button..................................................undefined
+Then User see message : "Hello, Ann, you are a kid".........................undefined
+]]></skipped>
 </testcase>
-<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.120997">
-<system-out><![CDATA[Given I am on action page...................................................passed
-When I clicked on checkboxes:...............................................passed
-And I click the result checkbox button......................................passed
-Then message for checkboxes "You selected value(s): Option 1, Option 2, Option 3" is seen.passed
-]]></system-out>
+<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid 3" time="4.096481">
+<skipped><![CDATA[Given User navigates to Age Page............................................undefined
+When User enter details.....................................................skipped
+And Click on Submit button..................................................undefined
+Then User see message : "Hello, Robin, you are a teenager"..................undefined
+]]></skipped>
+</testcase>
+<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid 4" time="4.07552">
+<skipped><![CDATA[Given User navigates to Age Page............................................undefined
+When User enter details.....................................................skipped
+And Click on Submit button..................................................undefined
+Then User see message : "Hello, Robin, you are a Kid".......................undefined
+]]></skipped>
 </testcase>
 </testsuite>

@@ -7,10 +7,12 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.List;
+import java.util.Map;
 
-    public class Sample4Steps {
+public class Sample4Steps {
 
         private WebDriver driver;
 
@@ -42,6 +44,19 @@ import java.util.List;
         @Then("^message for checkboxes \"([^\"]*)\" is seen$")
         public void message_for_checkboxes_is_seen(String arg1) throws Throwable {
             Assert.assertEquals(arg1, driver.findElement(By.id("result_checkbox")).getText());
+        }
+
+        @When("^User enter details$")
+        public void user_enter_details(Map<String, String> arg1) throws Throwable {
+            // Write code here that turns the phrase above into concrete actions
+            for(Map.Entry<String, String> map : arg1.entrySet())
+            {
+                String mapKey = map.getKey(); //name , age
+                String mapValue = map.getValue(); //Ann , 5
+                WebElement element = driver.findElement(By.id(mapKey));
+                element.clear();
+                element.sendKeys(mapValue);
+            }
         }
     }
 
