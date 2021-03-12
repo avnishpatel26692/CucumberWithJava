@@ -11,9 +11,10 @@ import org.junit.runner.RunWith;
                 "junit:cucumber-report/junit-report.xml",
                 "json:cucumber-report/json-report.json"},
         tags = {"@Sample1"},
-        dryRun = false,
+        dryRun = true,
         glue = {"stepDefinitions"}
 )
 public class CucumberRunner {
 //
 }
+//  /Users/i/Documents/JavaUdemy/src/src/CucumberWithJava1/src/test/java/runners

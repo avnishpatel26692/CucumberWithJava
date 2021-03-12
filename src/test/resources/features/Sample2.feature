@@ -2,6 +2,9 @@ Feature: Introduction to cucumber part 1
   As a test engineer
   I want to be able to write and execute a simple scenario
 
+  Background:
+    Given User navigates to Age Page
+
   Scenario: Navigate to link Page
     When User navigates to Link Page
     Then User should be verified page is opened correctly
