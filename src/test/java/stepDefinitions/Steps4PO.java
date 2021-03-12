@@ -130,9 +130,8 @@ public class Steps4PO {
         WebElement genderButton = this.driver.findElement(By.id(arg6));
         genderButton.click();
 
-        WebElement status = this.driver.findElement(By.id("status"));
-        status.click();
-
+        Select status = new Select(this.driver.findElement(By.id("status")));
+        status.selectByVisibleText(arg7);
     }
 
         //throw new PendingException();
