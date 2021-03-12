@@ -1,529 +1,282 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Sample5.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Sample6.feature");
 formatter.feature({
   "line": 1,
-  "name": "Two Column Data Table",
+  "name": "Data Table Examples",
   "description": "",
-  "id": "two-column-data-table",
+  "id": "data-table-examples",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "line": 12,
-  "name": "Check Age page functionality for Kid",
-  "description": "",
-  "id": "two-column-data-table;check-age-page-functionality-for-kid",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 11,
-      "name": "@Sample5"
-    },
-    {
-      "line": 11,
-      "name": "@Test2"
-    }
-  ]
+formatter.before({
+  "duration": 1337307400,
+  "status": "passed"
 });
-formatter.step({
-  "line": 13,
-  "name": "User navigates to Age Page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 14,
-  "name": "User enter details",
-  "rows": [
-    {
-      "cells": [
-        "name",
-        "\u003cname\u003e"
-      ],
-      "line": 15
-    },
-    {
-      "cells": [
-        "age",
-        "\u003cage\u003e"
-      ],
-      "line": 16
-    }
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 17,
-  "name": "Click on Submit button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 18,
-  "name": "User see message : \"\u003cmessage\u003e\"",
-  "keyword": "Then "
-});
-formatter.examples({
-  "line": 19,
+formatter.background({
+  "line": 3,
   "name": "",
   "description": "",
-  "id": "two-column-data-table;check-age-page-functionality-for-kid;",
-  "rows": [
-    {
-      "cells": [
-        "name",
-        "age",
-        "message"
-      ],
-      "line": 20,
-      "id": "two-column-data-table;check-age-page-functionality-for-kid;;1"
-    },
-    {
-      "cells": [
-        "ABC",
-        "29",
-        "Hello, ABC, you are an adult"
-      ],
-      "line": 21,
-      "id": "two-column-data-table;check-age-page-functionality-for-kid;;2"
-    },
-    {
-      "cells": [
-        "Ann",
-        "5",
-        "Hello, Ann, you are a kid"
-      ],
-      "line": 22,
-      "id": "two-column-data-table;check-age-page-functionality-for-kid;;3"
-    },
-    {
-      "cells": [
-        "Robin",
-        "16",
-        "Hello, Robin, you are a teenager"
-      ],
-      "line": 23,
-      "id": "two-column-data-table;check-age-page-functionality-for-kid;;4"
-    },
-    {
-      "cells": [
-        "Sam",
-        "7",
-        "Hello, Sam, you are a kid"
-      ],
-      "line": 24,
-      "id": "two-column-data-table;check-age-page-functionality-for-kid;;5"
-    }
-  ],
-  "keyword": "Examples"
+  "type": "background",
+  "keyword": "Background"
 });
-formatter.before({
-  "duration": 1340204500,
+formatter.step({
+  "line": 4,
+  "name": "I am on action page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "Sample4Steps.i_am_on_action_page()"
+});
+formatter.result({
+  "duration": 978054400,
   "status": "passed"
 });
 formatter.scenario({
+  "line": 6,
+  "name": "a new scenario with 1-row table",
+  "description": "",
+  "id": "data-table-examples;a-new-scenario-with-1-row-table",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 7,
+  "name": "I clicked on checkboxes:",
+  "rows": [
+    {
+      "cells": [
+        "Option 1"
+      ],
+      "line": 8
+    },
+    {
+      "cells": [
+        "Option 3"
+      ],
+      "line": 9
+    }
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 10,
+  "name": "I click the result checkbox button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "message for checkboxes \"You selected value(s): Option 1, Option 3\" is seen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
+});
+formatter.result({
+  "duration": 85911100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Sample4Steps.i_click_the_result_checkbox_button()"
+});
+formatter.result({
+  "duration": 31032300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "You selected value(s): Option 1, Option 3",
+      "offset": 24
+    }
+  ],
+  "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
+});
+formatter.result({
+  "duration": 18903100,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3082335300,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 994794700,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "I am on action page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "Sample4Steps.i_am_on_action_page()"
+});
+formatter.result({
+  "duration": 897002800,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "a new scenario with 1-row table",
+  "description": "",
+  "id": "data-table-examples;a-new-scenario-with-1-row-table",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 14,
+  "name": "I clicked on checkboxes:",
+  "rows": [
+    {
+      "cells": [
+        "Option 2"
+      ],
+      "line": 15
+    }
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 16,
+  "name": "I click the result checkbox button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "message for checkboxes \"You selected value(s): Option 2\" is seen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
+});
+formatter.result({
+  "duration": 41960800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Sample4Steps.i_click_the_result_checkbox_button()"
+});
+formatter.result({
+  "duration": 32404100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "You selected value(s): Option 2",
+      "offset": 24
+    }
+  ],
+  "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
+});
+formatter.result({
+  "duration": 18375400,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3089926300,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 994523000,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "I am on action page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "Sample4Steps.i_am_on_action_page()"
+});
+formatter.result({
+  "duration": 881606700,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 20,
+  "name": "a new scenario with 1-row table",
+  "description": "",
+  "id": "data-table-examples;a-new-scenario-with-1-row-table",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
   "line": 21,
-  "name": "Check Age page functionality for Kid",
-  "description": "",
-  "id": "two-column-data-table;check-age-page-functionality-for-kid;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 11,
-      "name": "@Sample5"
-    },
-    {
-      "line": 11,
-      "name": "@Test2"
-    }
-  ]
-});
-formatter.step({
-  "line": 13,
-  "name": "User navigates to Age Page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 14,
-  "name": "User enter details",
-  "matchedColumns": [
-    0,
-    1
-  ],
+  "name": "I clicked on checkboxes:",
   "rows": [
     {
       "cells": [
-        "name",
-        "ABC"
+        "Option 1"
       ],
-      "line": 15
+      "line": 22
     },
     {
       "cells": [
-        "age",
-        "29"
+        "Option 2"
       ],
-      "line": 16
+      "line": 23
+    },
+    {
+      "cells": [
+        "Option 3"
+      ],
+      "line": 24
     }
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 17,
-  "name": "Click on Submit button",
+  "line": 25,
+  "name": "I click the result checkbox button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 18,
-  "name": "User see message : \"Hello, ABC, you are an adult\"",
-  "matchedColumns": [
-    2
-  ],
+  "line": 26,
+  "name": "message for checkboxes \"You selected value(s): Option 1, Option 2, Option 3\" is seen",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Sample5Steps.user_navigates_to_Age_Page()"
+  "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
 });
 formatter.result({
-  "duration": 851150900,
+  "duration": 114372100,
   "status": "passed"
 });
 formatter.match({
-  "location": "Sample4Steps.user_enter_details(String,String\u003e)"
+  "location": "Sample4Steps.i_click_the_result_checkbox_button()"
 });
 formatter.result({
-  "duration": 119302500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample5Steps.click_on_Submit_button()"
-});
-formatter.result({
-  "duration": 75791600,
+  "duration": 31931600,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Hello, ABC, you are an adult",
-      "offset": 20
+      "val": "You selected value(s): Option 1, Option 2, Option 3",
+      "offset": 24
     }
   ],
-  "location": "Sample5Steps.user_see_message(String)"
+  "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
 });
 formatter.result({
-  "duration": 17200300,
+  "duration": 17769500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3274768300,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1010145500,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 22,
-  "name": "Check Age page functionality for Kid",
-  "description": "",
-  "id": "two-column-data-table;check-age-page-functionality-for-kid;;3",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 11,
-      "name": "@Sample5"
-    },
-    {
-      "line": 11,
-      "name": "@Test2"
-    }
-  ]
-});
-formatter.step({
-  "line": 13,
-  "name": "User navigates to Age Page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 14,
-  "name": "User enter details",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "rows": [
-    {
-      "cells": [
-        "name",
-        "Ann"
-      ],
-      "line": 15
-    },
-    {
-      "cells": [
-        "age",
-        "5"
-      ],
-      "line": 16
-    }
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 17,
-  "name": "Click on Submit button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 18,
-  "name": "User see message : \"Hello, Ann, you are a kid\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Sample5Steps.user_navigates_to_Age_Page()"
-});
-formatter.result({
-  "duration": 887826500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample4Steps.user_enter_details(String,String\u003e)"
-});
-formatter.result({
-  "duration": 122005400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample5Steps.click_on_Submit_button()"
-});
-formatter.result({
-  "duration": 79867300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Hello, Ann, you are a kid",
-      "offset": 20
-    }
-  ],
-  "location": "Sample5Steps.user_see_message(String)"
-});
-formatter.result({
-  "duration": 16160300,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3090140200,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 994526200,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 23,
-  "name": "Check Age page functionality for Kid",
-  "description": "",
-  "id": "two-column-data-table;check-age-page-functionality-for-kid;;4",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 11,
-      "name": "@Sample5"
-    },
-    {
-      "line": 11,
-      "name": "@Test2"
-    }
-  ]
-});
-formatter.step({
-  "line": 13,
-  "name": "User navigates to Age Page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 14,
-  "name": "User enter details",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "rows": [
-    {
-      "cells": [
-        "name",
-        "Robin"
-      ],
-      "line": 15
-    },
-    {
-      "cells": [
-        "age",
-        "16"
-      ],
-      "line": 16
-    }
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 17,
-  "name": "Click on Submit button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 18,
-  "name": "User see message : \"Hello, Robin, you are a teenager\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Sample5Steps.user_navigates_to_Age_Page()"
-});
-formatter.result({
-  "duration": 867951100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample4Steps.user_enter_details(String,String\u003e)"
-});
-formatter.result({
-  "duration": 116709800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample5Steps.click_on_Submit_button()"
-});
-formatter.result({
-  "duration": 72280600,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Hello, Robin, you are a teenager",
-      "offset": 20
-    }
-  ],
-  "location": "Sample5Steps.user_see_message(String)"
-});
-formatter.result({
-  "duration": 16350700,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3093330700,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 991929100,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 24,
-  "name": "Check Age page functionality for Kid",
-  "description": "",
-  "id": "two-column-data-table;check-age-page-functionality-for-kid;;5",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 11,
-      "name": "@Sample5"
-    },
-    {
-      "line": 11,
-      "name": "@Test2"
-    }
-  ]
-});
-formatter.step({
-  "line": 13,
-  "name": "User navigates to Age Page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 14,
-  "name": "User enter details",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "rows": [
-    {
-      "cells": [
-        "name",
-        "Sam"
-      ],
-      "line": 15
-    },
-    {
-      "cells": [
-        "age",
-        "7"
-      ],
-      "line": 16
-    }
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 17,
-  "name": "Click on Submit button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 18,
-  "name": "User see message : \"Hello, Sam, you are a kid\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Sample5Steps.user_navigates_to_Age_Page()"
-});
-formatter.result({
-  "duration": 863179100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample4Steps.user_enter_details(String,String\u003e)"
-});
-formatter.result({
-  "duration": 113610600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample5Steps.click_on_Submit_button()"
-});
-formatter.result({
-  "duration": 75679500,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Hello, Sam, you are a kid",
-      "offset": 20
-    }
-  ],
-  "location": "Sample5Steps.user_see_message(String)"
-});
-formatter.result({
-  "duration": 15079500,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3081198200,
+  "duration": 3084260600,
   "status": "passed"
 });
 });

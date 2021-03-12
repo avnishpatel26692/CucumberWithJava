@@ -3,121 +3,23 @@
     "line": 1,
     "elements": [
       {
-        "before": [
-          {
-            "result": {
-              "duration": 1340204500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.openBrowser()"
-            }
-          }
-        ],
-        "line": 21,
-        "name": "Check Age page functionality for Kid",
+        "line": 3,
+        "name": "",
         "description": "",
-        "id": "two-column-data-table;check-age-page-functionality-for-kid;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 3274768300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.embedScreenshot(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 851150900,
+              "duration": 978054400,
               "status": "passed"
             },
-            "line": 13,
-            "name": "User navigates to Age Page",
+            "line": 4,
+            "name": "I am on action page",
             "match": {
-              "location": "Sample5Steps.user_navigates_to_Age_Page()"
+              "location": "Sample4Steps.i_am_on_action_page()"
             },
             "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 119302500,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "User enter details",
-            "match": {
-              "location": "Sample4Steps.user_enter_details(String,String\u003e)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
-            "rows": [
-              {
-                "cells": [
-                  "name",
-                  "ABC"
-                ],
-                "line": 15
-              },
-              {
-                "cells": [
-                  "age",
-                  "29"
-                ],
-                "line": 16
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 75791600,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "Click on Submit button",
-            "match": {
-              "location": "Sample5Steps.click_on_Submit_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 17200300,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "User see message : \"Hello, ABC, you are an adult\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Hello, ABC, you are an adult",
-                  "offset": 20
-                }
-              ],
-              "location": "Sample5Steps.user_see_message(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 11,
-            "name": "@Sample5"
-          },
-          {
-            "line": 11,
-            "name": "@Test2"
           }
         ]
       },
@@ -125,7 +27,7 @@
         "before": [
           {
             "result": {
-              "duration": 1010145500,
+              "duration": 1337307400,
               "status": "passed"
             },
             "match": {
@@ -133,14 +35,14 @@
             }
           }
         ],
-        "line": 22,
-        "name": "Check Age page functionality for Kid",
+        "line": 6,
+        "name": "a new scenario with 1-row table",
         "description": "",
-        "id": "two-column-data-table;check-age-page-functionality-for-kid;;3",
+        "id": "data-table-examples;a-new-scenario-with-1-row-table",
         "after": [
           {
             "result": {
-              "duration": 3090140200,
+              "duration": 3082335300,
               "status": "passed"
             },
             "match": {
@@ -149,94 +51,84 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 887826500,
+              "duration": 85911100,
               "status": "passed"
             },
-            "line": 13,
-            "name": "User navigates to Age Page",
+            "line": 7,
+            "name": "I clicked on checkboxes:",
             "match": {
-              "location": "Sample5Steps.user_navigates_to_Age_Page()"
+              "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
             },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 122005400,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "User enter details",
-            "match": {
-              "location": "Sample4Steps.user_enter_details(String,String\u003e)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
             "rows": [
               {
                 "cells": [
-                  "name",
-                  "Ann"
+                  "Option 1"
                 ],
-                "line": 15
+                "line": 8
               },
               {
                 "cells": [
-                  "age",
-                  "5"
+                  "Option 3"
                 ],
-                "line": 16
+                "line": 9
               }
             ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 79867300,
+              "duration": 31032300,
               "status": "passed"
             },
-            "line": 17,
-            "name": "Click on Submit button",
+            "line": 10,
+            "name": "I click the result checkbox button",
             "match": {
-              "location": "Sample5Steps.click_on_Submit_button()"
+              "location": "Sample4Steps.i_click_the_result_checkbox_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 16160300,
+              "duration": 18903100,
               "status": "passed"
             },
-            "line": 18,
-            "name": "User see message : \"Hello, Ann, you are a kid\"",
+            "line": 11,
+            "name": "message for checkboxes \"You selected value(s): Option 1, Option 3\" is seen",
             "match": {
               "arguments": [
                 {
-                  "val": "Hello, Ann, you are a kid",
-                  "offset": 20
+                  "val": "You selected value(s): Option 1, Option 3",
+                  "offset": 24
                 }
               ],
-              "location": "Sample5Steps.user_see_message(String)"
+              "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
             },
-            "matchedColumns": [
-              2
-            ],
             "keyword": "Then "
           }
-        ],
-        "tags": [
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
           {
-            "line": 11,
-            "name": "@Sample5"
-          },
-          {
-            "line": 11,
-            "name": "@Test2"
+            "result": {
+              "duration": 897002800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on action page",
+            "match": {
+              "location": "Sample4Steps.i_am_on_action_page()"
+            },
+            "keyword": "Given "
           }
         ]
       },
@@ -244,7 +136,7 @@
         "before": [
           {
             "result": {
-              "duration": 994526200,
+              "duration": 994794700,
               "status": "passed"
             },
             "match": {
@@ -252,14 +144,14 @@
             }
           }
         ],
-        "line": 23,
-        "name": "Check Age page functionality for Kid",
+        "line": 13,
+        "name": "a new scenario with 1-row table",
         "description": "",
-        "id": "two-column-data-table;check-age-page-functionality-for-kid;;4",
+        "id": "data-table-examples;a-new-scenario-with-1-row-table",
         "after": [
           {
             "result": {
-              "duration": 3093330700,
+              "duration": 3089926300,
               "status": "passed"
             },
             "match": {
@@ -268,94 +160,78 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 867951100,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "User navigates to Age Page",
-            "match": {
-              "location": "Sample5Steps.user_navigates_to_Age_Page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 116709800,
+              "duration": 41960800,
               "status": "passed"
             },
             "line": 14,
-            "name": "User enter details",
+            "name": "I clicked on checkboxes:",
             "match": {
-              "location": "Sample4Steps.user_enter_details(String,String\u003e)"
+              "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
             },
-            "matchedColumns": [
-              0,
-              1
-            ],
             "rows": [
               {
                 "cells": [
-                  "name",
-                  "Robin"
+                  "Option 2"
                 ],
                 "line": 15
-              },
-              {
-                "cells": [
-                  "age",
-                  "16"
-                ],
-                "line": 16
               }
             ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 72280600,
+              "duration": 32404100,
               "status": "passed"
             },
-            "line": 17,
-            "name": "Click on Submit button",
+            "line": 16,
+            "name": "I click the result checkbox button",
             "match": {
-              "location": "Sample5Steps.click_on_Submit_button()"
+              "location": "Sample4Steps.i_click_the_result_checkbox_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 16350700,
+              "duration": 18375400,
               "status": "passed"
             },
-            "line": 18,
-            "name": "User see message : \"Hello, Robin, you are a teenager\"",
+            "line": 17,
+            "name": "message for checkboxes \"You selected value(s): Option 2\" is seen",
             "match": {
               "arguments": [
                 {
-                  "val": "Hello, Robin, you are a teenager",
-                  "offset": 20
+                  "val": "You selected value(s): Option 2",
+                  "offset": 24
                 }
               ],
-              "location": "Sample5Steps.user_see_message(String)"
+              "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
             },
-            "matchedColumns": [
-              2
-            ],
             "keyword": "Then "
           }
-        ],
-        "tags": [
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
           {
-            "line": 11,
-            "name": "@Sample5"
-          },
-          {
-            "line": 11,
-            "name": "@Test2"
+            "result": {
+              "duration": 881606700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on action page",
+            "match": {
+              "location": "Sample4Steps.i_am_on_action_page()"
+            },
+            "keyword": "Given "
           }
         ]
       },
@@ -363,7 +239,7 @@
         "before": [
           {
             "result": {
-              "duration": 991929100,
+              "duration": 994523000,
               "status": "passed"
             },
             "match": {
@@ -371,14 +247,14 @@
             }
           }
         ],
-        "line": 24,
-        "name": "Check Age page functionality for Kid",
+        "line": 20,
+        "name": "a new scenario with 1-row table",
         "description": "",
-        "id": "two-column-data-table;check-age-page-functionality-for-kid;;5",
+        "id": "data-table-examples;a-new-scenario-with-1-row-table",
         "after": [
           {
             "result": {
-              "duration": 3081198200,
+              "duration": 3084260600,
               "status": "passed"
             },
             "match": {
@@ -387,102 +263,77 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 863179100,
+              "duration": 114372100,
               "status": "passed"
             },
-            "line": 13,
-            "name": "User navigates to Age Page",
+            "line": 21,
+            "name": "I clicked on checkboxes:",
             "match": {
-              "location": "Sample5Steps.user_navigates_to_Age_Page()"
+              "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
             },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 113610600,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "User enter details",
-            "match": {
-              "location": "Sample4Steps.user_enter_details(String,String\u003e)"
-            },
-            "matchedColumns": [
-              0,
-              1
-            ],
             "rows": [
               {
                 "cells": [
-                  "name",
-                  "Sam"
+                  "Option 1"
                 ],
-                "line": 15
+                "line": 22
               },
               {
                 "cells": [
-                  "age",
-                  "7"
+                  "Option 2"
                 ],
-                "line": 16
+                "line": 23
+              },
+              {
+                "cells": [
+                  "Option 3"
+                ],
+                "line": 24
               }
             ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 75679500,
+              "duration": 31931600,
               "status": "passed"
             },
-            "line": 17,
-            "name": "Click on Submit button",
+            "line": 25,
+            "name": "I click the result checkbox button",
             "match": {
-              "location": "Sample5Steps.click_on_Submit_button()"
+              "location": "Sample4Steps.i_click_the_result_checkbox_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 15079500,
+              "duration": 17769500,
               "status": "passed"
             },
-            "line": 18,
-            "name": "User see message : \"Hello, Sam, you are a kid\"",
+            "line": 26,
+            "name": "message for checkboxes \"You selected value(s): Option 1, Option 2, Option 3\" is seen",
             "match": {
               "arguments": [
                 {
-                  "val": "Hello, Sam, you are a kid",
-                  "offset": 20
+                  "val": "You selected value(s): Option 1, Option 2, Option 3",
+                  "offset": 24
                 }
               ],
-              "location": "Sample5Steps.user_see_message(String)"
+              "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
             },
-            "matchedColumns": [
-              2
-            ],
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 11,
-            "name": "@Sample5"
-          },
-          {
-            "line": 11,
-            "name": "@Test2"
           }
         ]
       }
     ],
-    "name": "Two Column Data Table",
+    "name": "Data Table Examples",
     "description": "",
-    "id": "two-column-data-table",
+    "id": "data-table-examples",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/Sample5.feature"
+    "uri": "src/test/resources/features/Sample6.feature"
   }
 ]

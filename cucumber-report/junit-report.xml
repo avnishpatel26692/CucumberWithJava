@@ -1,30 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="21.186388">
-<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid" time="5.678418">
-<system-out><![CDATA[Given User navigates to Age Page............................................passed
-When User enter details.....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, ABC, you are an adult"......................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="15.732472">
+<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.533544">
+<system-out><![CDATA[Given I am on action page...................................................passed
+When I clicked on checkboxes:...............................................passed
+And I click the result checkbox button......................................passed
+Then message for checkboxes "You selected value(s): Option 1, Option 3" is seen.passed
 ]]></system-out>
 </testcase>
-<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid 2" time="5.206145">
-<system-out><![CDATA[Given User navigates to Age Page............................................passed
-When User enter details.....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, Ann, you are a kid".........................passed
+<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.074464">
+<system-out><![CDATA[Given I am on action page...................................................passed
+When I clicked on checkboxes:...............................................passed
+And I click the result checkbox button......................................passed
+Then message for checkboxes "You selected value(s): Option 2" is seen.......passed
 ]]></system-out>
 </testcase>
-<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid 3" time="5.161149">
-<system-out><![CDATA[Given User navigates to Age Page............................................passed
-When User enter details.....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, Robin, you are a teenager"..................passed
-]]></system-out>
-</testcase>
-<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid 4" time="5.140676">
-<system-out><![CDATA[Given User navigates to Age Page............................................passed
-When User enter details.....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, Sam, you are a kid".........................passed
+<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.124464">
+<system-out><![CDATA[Given I am on action page...................................................passed
+When I clicked on checkboxes:...............................................passed
+And I click the result checkbox button......................................passed
+Then message for checkboxes "You selected value(s): Option 1, Option 2, Option 3" is seen.passed
 ]]></system-out>
 </testcase>
 </testsuite>
