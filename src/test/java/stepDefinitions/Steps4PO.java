@@ -34,11 +34,11 @@ public class Steps4PO {
     AgePage agePO;
     AgeSubmittedPage ageSubmittedPO;
 
-    public  Steps4PO () {
+    public Steps4PO() {
         this.driver = Hooks.driver;
-        agePO = PageFactory.initElements(this.driver, AgePage .class);
-        ageSubmittedPO = PageFactory.initElements(this.driver, AgeSubmittedPage .class);
-}
+        agePO = PageFactory.initElements(this.driver, AgePage.class);
+        ageSubmittedPO = PageFactory.initElements(this.driver, AgeSubmittedPage.class);
+    }
 
 
     @Given("^I am on age page using PO$")
@@ -59,7 +59,7 @@ public class Steps4PO {
     @When("^I enter age: (\\d+) using PO$")
     public void i_enter_age_using_PO(int arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        agePO.enterAge(""+arg1);
+        agePO.enterAge("" + arg1);
         //throw new PendingException();
     }
 
@@ -75,6 +75,30 @@ public class Steps4PO {
         // Write code here that turns the phrase above into concrete actions
         ageSubmittedPO.getMessage();
         //throw new PendingException();
+    }
+
+    @Given("^I am on age page$")
+    public void i_am_on_age_page() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        driver.get("https://kristinek.github.io/site/examples/age");
+        // throw new PendingException();
+    }
+
+    @When("^I enter values using PO:$")
+    public void i_enter_values_using_PO(Map<String, String> arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        // For automatic transformation, change DataTable to one of
+        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+        // E,K,V must be a scalar (String, Integer, Date, enum etc)
+        for (Map.Entry<String, String> map : arg1.entrySet()) {
+            String mapKey = map.getKey(); //name , age
+            String mapValue = map.getValue(); //Ivan , 6
+            WebElement element = driver.findElement(By.id(mapKey));
+            element.clear();
+            element.sendKeys(mapValue);
+        }
+        //throw new PendingException()
+
     }
 }
 
