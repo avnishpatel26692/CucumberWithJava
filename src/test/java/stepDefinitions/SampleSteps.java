@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -147,8 +148,34 @@ public class SampleSteps {
         Assert.assertEquals(arg1, driver.findElement(By.id("result_checkbox")).getText());
     }
 
+    @When("^User enter details$")
+    public void user_enter_details(Map<String, String> arg1) throws Throwable
+    {
+
+        for (Map.Entry<String, String> map : arg1.entrySet())
+        {
+            String mapKey = map.getKey();
+            String mapValue = map.getValue();
+            WebElement element = driver.findElement(By.id(mapKey));
+            element.clear();
+            element.sendKeys(mapValue);
+        }
+    }
 
 
+    @Given("^I have the following order$")
+    public void i_have_the_following_order(DataTable arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        for(Map<String, String> map: arg1.asMaps(String.class, String.class))
+        {
+            String vegetableName = map.get("vegetable"); //cucumber
+            String quantity = map.get("quantity"); //4
+            String price = map.get("cost"); //10
+            System.out.println("Vegetable Name : " +vegetableName);
+            System.out.println("Quantity : " +quantity);
+            System.out.println("Cost : " +price);
+        }
+    }
 
 }
 
