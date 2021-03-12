@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -118,8 +119,66 @@ public class SampleSteps {
 
     @Then("^I see a new message: \"([^\"]*)\"$")
     public void i_see_a_new_message(String arg1) throws Throwable {
-        driver.switchTo().alert().getText();
+        Assert.assertEquals(arg1,driver.switchTo().alert().getText());
     }
+////Sample4
+
+    @Given("^I am on Action Page$")
+    public void i_am_on_Action_Page() throws Throwable {
+        driver.get("https://kristinek.github.io/site/examples/actions");
+    }
+
+    @When("^I clicked on checkboxes:$")
+    public void i_clicked_on_checkboxes(List<String> arg1) throws Throwable {
+        for(String value : arg1)
+        {
+            String Start_xpath = "//input[@type='checkbox'][@value='";
+            String checkboxName = value;
+            String end_xpath = "']";
+            String xpath = Start_xpath + checkboxName + end_xpath;
+            System.out.println("Xpath : " + xpath);
+            driver.findElement(By.xpath(xpath)).click();
+        }
+
+    }
+
+    @When("^I click on checkbox button$")
+    public void i_click_on_checkbox_button() throws Throwable {
+        driver.findElement(By.id("result_button_checkbox")).click();
+    }
+
+    @Then("^message for checkboxes \"([^\"]*)\" is seen$")
+    public void message_for_checkboxes_is_seen(String arg1) throws Throwable {
+        Assert.assertEquals(arg1, driver.findElement(By.id("result_checkbox")).getText());
+    }
+
+    ///Sample5
+    @When("^User enter details$")
+    public void user_enter_details(Map<String, String> arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        for(Map.Entry<String, String> map : arg1.entrySet())
+        {
+            String mapKey = map.getKey(); //name , age
+            String mapValue = map.getValue(); //Ann , 5
+            WebElement element = driver.findElement(By.id(mapKey));
+            element.clear();
+            element.sendKeys(mapValue);
+        }
+    }
+    //3 column data table
+    @Given("^I have the following order$")
+    public void i_have_the_following_order(DataTable arg1) throws Throwable {
+        for(Map<String, String> map: arg1.asMaps(String.class, String.class))
+        {
+            String vegetableName = map.get("vegetable"); //cucumber
+            String quantity = map.get("quantity"); //4
+            String price = map.get("cost"); //10
+            System.out.println("Vegetable Name : " +vegetableName);
+            System.out.println("Quantity : " +quantity);
+            System.out.println("Cost : " +price);
+        }
+    }
+
 
 }
 
