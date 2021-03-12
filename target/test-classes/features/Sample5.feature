@@ -24,3 +24,11 @@ Feature: Two Column Data Table
       |  Robb   | 15  | Hello, Robb, you are a teenager |
       |  Yaga   | 185 | Hello, Yaga, you are an immortal|
       |  Ilya   | 33  | Hello, Bob, you are a kid   |
+
+  @Sample5 @Test3
+  Scenario: 4 column Data Table
+    Given I have the following order
+      | vegetable | quantity | cost | sum |
+      | cucumber  |   4    |  10  |  40   |
+      | carrot    |   5    |   6  |  30   |
+      | potato    |   6    |   4  |  24   |
