@@ -252,9 +252,24 @@ public class SampleSteps {
 //        Assert.assertEquals(arg1, driver.findElement(By.id("w3-input w3-border w3-pale-red required")).getText());
     }
 
+    @When("^User enters details$")
+    public void user_enter_details(Map<String, String> arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        for(Map.Entry<String, String> map : arg1.entrySet())
+        {
+            String mapKey = map.getKey(); //name , age
+            String mapValue = map.getValue(); //Ann , 5
+            WebElement element = driver.findElement(By.id(mapKey));
+            element.clear();
+            element.sendKeys(mapValue);
+        }
+    }
 
 
-
+    @Then("^User see message : \"([^\"]*)\"$")
+    public void userSeesMessage(String arg1) throws Throwable {
+        Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
+    }
 }
 
 
