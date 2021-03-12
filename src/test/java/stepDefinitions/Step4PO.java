@@ -9,6 +9,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Map;
+
 
 public class Step4PO {
 
@@ -51,7 +53,14 @@ public class Step4PO {
         //Write code here that turns the phrase above into concrete action
         Assert.assertEquals(arg1,ageSubmittedPO.getMessage());
     }
+// Sample5UsingPO
 
+      @When("^I enter values using PO:$")
+    public void i_enter_values_using_PO(Map<String, String> arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        agePO.enterName(arg1.get("name"));
+        agePO.enterAge(arg1.get("age"));
+    }
 
 }
 

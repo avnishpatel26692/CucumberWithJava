@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="4" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="41.244896">
+<testcase classname="Testing task 2" name="add, edit, remove and reset" time="11.480823">
+<failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;w3-check&quot; type=&quot;checkbox&quot; id=&quot;english&quot; name=&quot;language&quot; checked=&quot;&quot;&gt; is not clickable at point (209, 629). Other element would receive the click: &lt;span title=&quot;...ursday&quot;&gt;Th&lt;/span&gt;&#10;  (Session info: chrome=89.0.4389.82)&#10;Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'&#10;System info: host: 'LAPTOP-PS83VCLO', ip: '10.125.32.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Anna\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55178}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5d87f9b2bb5ef0a53acb2725629c5101&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)&#13;&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)&#13;&#10;&#9;at stepDefinitions.Task2Steps.fill_all_fields(Task2Steps.java:38)&#13;&#10;&#9;at ✽.And fill all fields: &quot;Dmitrijs&quot;, &quot;Lvovs&quot;, &quot;Quality Engineer&quot;, &quot;01/05/1999&quot;, &quot;english&quot;, &quot;male&quot;, &quot;Employee&quot;(src/test/resources/features/Task2.feature:8)&#13;&#10;"><![CDATA[Given I am on Employee page.................................................passed
+When click on Add person....................................................passed
+And fill all fields: "Dmitrijs", "Lvovs", "Quality Engineer", "01/05/1999", "english", "male", "Employee".failed
+Then click button add.......................................................skipped
+When click on edit button...................................................skipped
+And edit something: "Sergej", "Orlov", "QA", "01/05/1999", "french", "male", "Intern".skipped
+And click on edit-button....................................................skipped
+And remove a person.........................................................skipped
+Then reset list.............................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class="w3-check" type="checkbox" id="english" name="language" checked=""> is not clickable at point (209, 629). Other element would receive the click: <span title="...ursday">Th</span>
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-PS83VCLO', ip: '10.125.32.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Anna\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55178}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d87f9b2bb5ef0a53acb2725629c5101
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at stepDefinitions.Task2Steps.fill_all_fields(Task2Steps.java:38)
+	at ✽.And fill all fields: "Dmitrijs", "Lvovs", "Quality Engineer", "01/05/1999", "english", "male", "Employee"(src/test/resources/features/Task2.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="Testing task 2" name="add, edit, remove and reset 2" time="8.164081">
+<failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;w3-check&quot; type=&quot;checkbox&quot; id=&quot;english&quot; name=&quot;language&quot; checked=&quot;&quot;&gt; is not clickable at point (209, 629). Other element would receive the click: &lt;span title=&quot;...ursday&quot;&gt;Th&lt;/span&gt;&#10;  (Session info: chrome=89.0.4389.82)&#10;Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'&#10;System info: host: 'LAPTOP-PS83VCLO', ip: '10.125.32.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Anna\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55217}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 9d9451c6d306f08c8eba39e7a9355896&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)&#13;&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)&#13;&#10;&#9;at stepDefinitions.Task2Steps.fill_all_fields(Task2Steps.java:38)&#13;&#10;&#9;at ✽.And fill all fields: &quot;Evgenij&quot;, &quot;Orlov&quot;, &quot;Quality Engineer&quot;, &quot;01/05/1979&quot;, &quot;english&quot;, &quot;male&quot;, &quot;Employee&quot;(src/test/resources/features/Task2.feature:8)&#13;&#10;"><![CDATA[Given I am on Employee page.................................................passed
+When click on Add person....................................................passed
+And fill all fields: "Evgenij", "Orlov", "Quality Engineer", "01/05/1979", "english", "male", "Employee".failed
+Then click button add.......................................................skipped
+When click on edit button...................................................skipped
+And edit something: "Evgenij", "Orlov", "GameDev", "01/05/1979", "spanish", "male", "Employee".skipped
+And click on edit-button....................................................skipped
+And remove a person.........................................................skipped
+Then reset list.............................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class="w3-check" type="checkbox" id="english" name="language" checked=""> is not clickable at point (209, 629). Other element would receive the click: <span title="...ursday">Th</span>
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-PS83VCLO', ip: '10.125.32.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Anna\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55217}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d9451c6d306f08c8eba39e7a9355896
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at stepDefinitions.Task2Steps.fill_all_fields(Task2Steps.java:38)
+	at ✽.And fill all fields: "Evgenij", "Orlov", "Quality Engineer", "01/05/1979", "english", "male", "Employee"(src/test/resources/features/Task2.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="Testing task 2" name="add, edit, remove and reset 3" time="9.898543">
+<failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;w3-check&quot; type=&quot;checkbox&quot; id=&quot;french&quot; name=&quot;language&quot; required=&quot;&quot;&gt; is not clickable at point (292, 629). Other element would receive the click: &lt;th scope=&quot;col&quot; class=&quot;ui-datepicker-week-end&quot;&gt;...&lt;/th&gt;&#10;  (Session info: chrome=89.0.4389.82)&#10;Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'&#10;System info: host: 'LAPTOP-PS83VCLO', ip: '10.125.32.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Anna\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55256}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: bc7a7872ab966d26bbb347e14045dcf9&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)&#13;&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#13;&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)&#13;&#10;&#9;at stepDefinitions.Task2Steps.fill_all_fields(Task2Steps.java:38)&#13;&#10;&#9;at ✽.And fill all fields: &quot;Ekaterina&quot;, &quot;Velika&quot;, &quot;Team manager&quot;, &quot;04/07/2000&quot;, &quot;french&quot;, &quot;female&quot;, &quot;Employee&quot;(src/test/resources/features/Task2.feature:8)&#13;&#10;"><![CDATA[Given I am on Employee page.................................................passed
+When click on Add person....................................................passed
+And fill all fields: "Ekaterina", "Velika", "Team manager", "04/07/2000", "french", "female", "Employee".failed
+Then click button add.......................................................skipped
+When click on edit button...................................................skipped
+And edit something: "Ekaterina", "Velika", "Team manager", "04/07/2000", "french", "female", "Employee".skipped
+And click on edit-button....................................................skipped
+And remove a person.........................................................skipped
+Then reset list.............................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class="w3-check" type="checkbox" id="french" name="language" required=""> is not clickable at point (292, 629). Other element would receive the click: <th scope="col" class="ui-datepicker-week-end">...</th>
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LAPTOP-PS83VCLO', ip: '10.125.32.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Anna\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55256}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bc7a7872ab966d26bbb347e14045dcf9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at stepDefinitions.Task2Steps.fill_all_fields(Task2Steps.java:38)
+	at ✽.And fill all fields: "Ekaterina", "Velika", "Team manager", "04/07/2000", "french", "female", "Employee"(src/test/resources/features/Task2.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="Testing task 2" name="check how working clear button" time="11.701449">
+<failure message="java.lang.UnsupportedOperationException: You may only deselect options of a multi-select&#13;&#10;&#9;at org.openqa.selenium.support.ui.Select.deselectByVisibleText(Select.java:294)&#13;&#10;&#9;at stepDefinitions.Task2Steps.fill_all_fields(Task2Steps.java:42)&#13;&#10;&#9;at ✽.And fill all fields: &quot;Ivan&quot;, &quot;Kotcov&quot;, &quot;Software developer&quot;, &quot;02/09/1985&quot;, &quot;spanish&quot;, &quot;male&quot;, &quot;Intern&quot;(src/test/resources/features/Task2.feature:25)&#13;&#10;"><![CDATA[Given I am on Employee page.................................................passed
+When click on Add person....................................................passed
+And fill all fields: "Ivan", "Kotcov", "Software developer", "02/09/1985", "spanish", "male", "Intern".failed
+And click clear-button......................................................skipped
+Then check empty fields.....................................................skipped
+
+StackTrace:
+java.lang.UnsupportedOperationException: You may only deselect options of a multi-select
+	at org.openqa.selenium.support.ui.Select.deselectByVisibleText(Select.java:294)
+	at stepDefinitions.Task2Steps.fill_all_fields(Task2Steps.java:42)
+	at ✽.And fill all fields: "Ivan", "Kotcov", "Software developer", "02/09/1985", "spanish", "male", "Intern"(src/test/resources/features/Task2.feature:25)
+]]></failure>
+</testcase>
+</testsuite>

@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/Sample2UsingPO.feature",
+        features = "src/test/resources/features/Sample5UsingPO.feature",
         plugin = {"pretty", "html:cucumber-report/html-report",
                 "junit:cucumber-report/junit-report.xml",
                 "json:cucumber-report/json-report.json"},
-        //tags = {"@SmokeTest"},
+        tags = {"@regression, @part4"},
         dryRun = false,
         glue = {"stepDefinitions"}
 )
