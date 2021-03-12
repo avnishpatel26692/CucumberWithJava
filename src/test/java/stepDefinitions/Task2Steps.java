@@ -101,7 +101,6 @@ public class Task2Steps {
 
     @When("^click clear-button$")
     public void click_clear_button() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         driver.findElement(By.id("#addPersonBtn")).click();
     }
 
