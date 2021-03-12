@@ -96,7 +96,7 @@ formatter.examples({
     {
       "cells": [
         "Robin",
-        "15",
+        "16",
         "Hello, Robin, you are a teenager"
       ],
       "line": 23,
@@ -105,8 +105,8 @@ formatter.examples({
     {
       "cells": [
         "Sam",
-        "15",
-        "Hello, Robin, you are a Kid"
+        "7",
+        "Hello, Sam, you are a kid"
       ],
       "line": 24,
       "id": "two-column-data-table;check-age-page-functionality-for-kid;;5"
@@ -115,7 +115,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 1322196300,
+  "duration": 1340204500,
   "status": "passed"
 });
 formatter.scenario({
@@ -179,30 +179,46 @@ formatter.step({
   ],
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "Sample5Steps.user_navigates_to_Age_Page()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 851150900,
+  "status": "passed"
 });
 formatter.match({
   "location": "Sample4Steps.user_enter_details(String,String\u003e)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 119302500,
+  "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Sample5Steps.click_on_Submit_button()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 75791600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Hello, ABC, you are an adult",
+      "offset": 20
+    }
+  ],
+  "location": "Sample5Steps.user_see_message(String)"
+});
+formatter.result({
+  "duration": 17200300,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 3337663000,
+  "duration": 3274768300,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1005714800,
+  "duration": 1010145500,
   "status": "passed"
 });
 formatter.scenario({
@@ -266,30 +282,46 @@ formatter.step({
   ],
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "Sample5Steps.user_navigates_to_Age_Page()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 887826500,
+  "status": "passed"
 });
 formatter.match({
   "location": "Sample4Steps.user_enter_details(String,String\u003e)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 122005400,
+  "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Sample5Steps.click_on_Submit_button()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 79867300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Hello, Ann, you are a kid",
+      "offset": 20
+    }
+  ],
+  "location": "Sample5Steps.user_see_message(String)"
+});
+formatter.result({
+  "duration": 16160300,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 3077716100,
+  "duration": 3090140200,
   "status": "passed"
 });
 formatter.before({
-  "duration": 998359900,
+  "duration": 994526200,
   "status": "passed"
 });
 formatter.scenario({
@@ -333,7 +365,7 @@ formatter.step({
     {
       "cells": [
         "age",
-        "15"
+        "16"
       ],
       "line": 16
     }
@@ -353,30 +385,46 @@ formatter.step({
   ],
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "Sample5Steps.user_navigates_to_Age_Page()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 867951100,
+  "status": "passed"
 });
 formatter.match({
   "location": "Sample4Steps.user_enter_details(String,String\u003e)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 116709800,
+  "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Sample5Steps.click_on_Submit_button()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 72280600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Hello, Robin, you are a teenager",
+      "offset": 20
+    }
+  ],
+  "location": "Sample5Steps.user_see_message(String)"
+});
+formatter.result({
+  "duration": 16350700,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 3098121100,
+  "duration": 3093330700,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1003250000,
+  "duration": 991929100,
   "status": "passed"
 });
 formatter.scenario({
@@ -420,7 +468,7 @@ formatter.step({
     {
       "cells": [
         "age",
-        "15"
+        "7"
       ],
       "line": 16
     }
@@ -434,32 +482,48 @@ formatter.step({
 });
 formatter.step({
   "line": 18,
-  "name": "User see message : \"Hello, Robin, you are a Kid\"",
+  "name": "User see message : \"Hello, Sam, you are a kid\"",
   "matchedColumns": [
     2
   ],
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "Sample5Steps.user_navigates_to_Age_Page()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 863179100,
+  "status": "passed"
 });
 formatter.match({
   "location": "Sample4Steps.user_enter_details(String,String\u003e)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 113610600,
+  "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Sample5Steps.click_on_Submit_button()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 75679500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Hello, Sam, you are a kid",
+      "offset": 20
+    }
+  ],
+  "location": "Sample5Steps.user_see_message(String)"
+});
+formatter.result({
+  "duration": 15079500,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 3072269800,
+  "duration": 3081198200,
   "status": "passed"
 });
 });

@@ -48,15 +48,15 @@ public class Sample4Steps {
 
         @When("^User enter details$")
         public void user_enter_details(Map<String, String> arg1) throws Throwable {
-            // Write code here that turns the phrase above into concrete actions
             for(Map.Entry<String, String> map : arg1.entrySet())
             {
-                String mapKey = map.getKey(); //name , age
-                String mapValue = map.getValue(); //Ann , 5
+                String mapKey = map.getKey();
+                String mapValue = map.getValue();
                 WebElement element = driver.findElement(By.id(mapKey));
                 element.clear();
                 element.sendKeys(mapValue);
             }
         }
+
     }
 

@@ -20,5 +20,5 @@ Feature: Two Column Data Table
       |name|age|message|
       |  ABC   | 29  | Hello, ABC, you are an adult   |
       |  Ann   | 5   | Hello, Ann, you are a kid   |
-      |  Robin | 15  |    Hello, Robin, you are a teenager  |
-      |     Sam|15   |     Hello, Robin, you are a Kid   |
+      |  Robin | 16  | Hello, Robin, you are a teenager  |
+      |   Sam  | 7   | Hello, Sam, you are a kid   |
