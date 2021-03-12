@@ -4,7 +4,15 @@ Feature: Introduction to cucumber part 1
 
   @Sample1
   Scenario: Simple scenario
-    When I am on the home page
+    Given I am on the home page
     Then I should see home page header
     And I should see home page description
     And I should see menu
+
+//Scenario: Simple scenario
+ // Given User open Facebook page
+ // When User enters username and password
+ // And User clicks on login button
+ // Then User should be logged in successfully
+
+
