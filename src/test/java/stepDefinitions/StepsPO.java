@@ -8,7 +8,10 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.Map;
 
 public class StepsPO {
     private WebDriver driver;
@@ -46,5 +49,18 @@ public class StepsPO {
     public void i_see_message_using_PO(String arg1) throws Throwable {
         Assert.assertEquals(arg1,driver.findElement(By.id("message")).getText());
     }
+
+    @When("^I enter values using PO:$")
+    public void i_enter_values_using_PO(Map<String, String> arg1) throws Throwable {
+        for(Map.Entry<String,String> map : arg1.entrySet())
+        {
+            String mapKey = map.getKey();
+            String mapValue = map.getValue();
+            WebElement element = driver.findElement(By.id(mapKey));
+            element.clear();
+            element.sendKeys(mapValue);
+        }
+    }
+
 
 }
