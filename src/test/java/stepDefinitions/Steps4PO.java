@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import Pages.AgePage;
 import Pages.AgeSubmittedPage;
+import Pages.PeopleList;
 import org.openqa.selenium.WebDriver;
 
 import cucumber.api.DataTable;
@@ -33,11 +34,13 @@ public class Steps4PO {
     private WebDriver driver;
     AgePage agePO;
     AgeSubmittedPage ageSubmittedPO;
+    PeopleList addPersonButton;
 
     public Steps4PO() {
         this.driver = Hooks.driver;
         agePO = PageFactory.initElements(this.driver, AgePage.class);
         ageSubmittedPO = PageFactory.initElements(this.driver, AgeSubmittedPage.class);
+        addPersonButton = PageFactory.initElements(this.driver, PeopleList.class);
     }
 
 
@@ -87,12 +90,142 @@ public class Steps4PO {
     @When("^I enter values using PO:$")
     public void i_enter_values_using_PO(Map<String, String> arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
-        // E,K,V must be a scalar (String, Integer, Date, enum etc)
         agePO.enterName(arg1.get("name"));
         agePO.enterAge(arg1.get("age"));
     }
-    //throw new PendingException()
+
+    @Given("^I am on Employee page$")
+    public void i_am_on_Employee_page() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        driver.get("https://kristinek.github.io/site/tasks/list_of_people");
+        //throw new PendingException();
+    }
+
+    @When("^click on Add person$")
+    public void click_on_Add_person() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        addPersonButton.clickAddPersonButton();
+
+        //throw new PendingException();
+    }
+
+    @When("^fill all fields: \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
+    public void fill_all_fields(String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement nameText = this.driver.findElement(By.id("name"));
+        nameText.sendKeys(arg1);
+
+        WebElement surnameText = this.driver.findElement(By.id("surname"));
+        surnameText.sendKeys(arg2);
+
+        WebElement jobText = this.driver.findElement(By.id("job"));
+        jobText.sendKeys(arg3);
+
+        WebElement dataEnterText = this.driver.findElement(By.id("dob"));
+        dataEnterText.sendKeys(arg4);
+
+        WebElement selectedCheck = this.driver.findElement(By.id(arg5));
+        selectedCheck.click();
+
+        WebElement genderButton = this.driver.findElement(By.id(arg6));
+        genderButton.click();
+
+        WebElement status = this.driver.findElement(By.id(arg6));
+        status.click();
+
+    }
+
+        //throw new PendingException();
+
+    @Then("^click button add$")
+    public void click_button_add() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement addButton = this.driver.findElement(By.xpath("//button[contains(text(),'Add')]"));
+        addButton.click();
+        //throw new PendingException();
+    }
+
+    @When("^click on edit button$")
+    public void click_on_edit_button1() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement editButton = this.driver.findElement(By.xpath("//*[@id='person0']/span[2]"));
+        editButton.click();
+
+        //throw new PendingException();
+    }
+
+    @When("^edit something: \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
+    public void edit_something(String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement nameText = this.driver.findElement(By.id("name"));//
+        nameText.sendKeys(arg1);
+
+        WebElement surnameText = this.driver.findElement(By.id("surname"));
+        surnameText.sendKeys(arg2);
+
+        WebElement jobText = this.driver.findElement(By.id("job"));
+        jobText.sendKeys(arg3);
+
+        WebElement dataEnterText = this.driver.findElement(By.id("dob"));
+        dataEnterText.sendKeys(arg4);
+
+        WebElement selectedCheck = this.driver.findElement(By.id(arg5));
+        selectedCheck.click();
+
+        WebElement genderButton = this.driver.findElement(By.id(arg6));
+        genderButton.click();
+
+        WebElement status = this.driver.findElement(By.id(arg6));
+        status.click();
+
+
+        // throw new PendingException();
+    }
+
+    @When("^click on edit-button$")
+    public void click_on_edit_button() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement editButton = this.driver.findElement(By.xpath("//button[contains(text(),'Edit')]"));
+        editButton.click();
+        //throw new PendingException();
+    }
+
+    @When("^remove a person$")
+    public void remove_a_person() throws Throwable {
+        //Write code here that turns the phrase above into concrete actions
+        WebElement removeButton = driver.findElement(By.xpath("//*[@id='person0']/span[1]"));
+        removeButton.click();
+
+        //throw new PendingException();
+    }
+
+    @Then("^reset list$")
+    public void reset_list() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement resetButton = driver.findElement(By.xpath("//button[contains(text(),'Reset List')]"));
+        resetButton.click();
+        //throw new PendingException();
+    }
+
+    @When("^click clear-button$")
+    public void click_clear_button() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement clearButton = driver.findElement(By.xpath(" //button[contains(text(),'Clear all fields')]"));
+        clearButton.click();
+       // throw new PendingException();
+    }
+
+    @Then("^check empty fields$")
+    public void check_empty_fields() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Assert.assertEquals("",driver.findElement(By.id("name")).getText());
+        Assert.assertEquals("",driver.findElement(By.id("surname")).getText());
+        Assert.assertEquals("",driver.findElement(By.id("job")).getText());
+        Assert.assertEquals("",driver.findElement(By.id("dob")).getText());
+
+        //throw new PendingException();
+    }
+
+
 }
 
