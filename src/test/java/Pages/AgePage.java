@@ -1,8 +1,11 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
+import java.util.Map;
 
 public class AgePage {
     @FindBy (how = How.ID,using="name")
@@ -22,6 +25,7 @@ public class AgePage {
         nameText.clear();
         nameText.sendKeys(name);
     }
+
     public  void enterAge(String age)
     {
 
@@ -30,6 +34,12 @@ public class AgePage {
     public  void clickSubBtn()
     {
         subBtn.click();
+    }
+
+    public void enterBoth(String name, String age){
+        nameText.clear();
+        nameText.sendKeys(name);
+        ageText.sendKeys(age);
     }
 
 

@@ -27,12 +27,13 @@ public class Steps4PO {
     private WebDriver driver;
     AgePage agePO;
     AgeSubmittedPage ageSubmittedPO;
-    public Steps4PO()
-    {
+
+    public Steps4PO() {
         this.driver = Hooks.driver;
-        agePO= PageFactory.initElements(this.driver, AgePage.class);
+        agePO = PageFactory.initElements(this.driver, AgePage.class);
         ageSubmittedPO = PageFactory.initElements(this.driver, AgeSubmittedPage.class);
     }
+
     @Given("^I am on age page using PO$")
     public void i_am_on_age_page_using_PO() throws Throwable {
         driver.get(agePO.agePageURL);
@@ -40,7 +41,7 @@ public class Steps4PO {
 
     @When("^I enter name: \"([^\"]*)\" using PO$")
     public void i_enter_name_using_PO(String arg1) throws Throwable {
-       agePO.enterName(arg1);
+        agePO.enterName(arg1);
     }
 
     @When("^I enter age: \"([^\"]*)\" using PO$")
@@ -50,13 +51,18 @@ public class Steps4PO {
 
     @When("^I click submit age using PO$")
     public void i_click_submit_age_using_PO() throws Throwable {
-   agePO.clickSubBtn();
+        agePO.clickSubBtn();
     }
 
     @Then("^I see message: \"([^\"]*)\" using PO$")
     public void i_see_message_using_PO(String arg1) throws Throwable {
-  Assert.assertEquals(arg1,ageSubmittedPO.getMessage());
+        Assert.assertEquals(arg1, ageSubmittedPO.getMessage());
     }
 
 
+    @When("^I enter values using PO:$")
+    public void iEnterValuesUsingPO(Map<String, String> arg1) {
+    agePO.enterName(arg1.get("name"));
+    agePO.enterAge(arg1.get("age"));
+    }
 }
