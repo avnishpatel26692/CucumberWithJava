@@ -145,6 +145,24 @@ driver.findElement(By.id("result_button_checkbox")).click();
 Assert.assertEquals(arg1,driver.findElement(By.id("result_checkbox")).getText());
     }
 
+    @Given("^I am on age page$")
+    public void i_am_on_age_page() throws Throwable {
+        driver.navigate().to("https://kristinek.github.io/site/examples/age");
+    }
+
+    @When("^User enter details$")
+    public void user_enter_details(Map<String, String> arg1) throws Throwable {
+        for(Map.Entry<String, String> map : arg1.entrySet()){
+            String mapKey = map.getKey();
+            String mapValue = map.getValue();
+            WebElement element = driver.findElement(By.id(mapKey));
+            element.clear();
+            element.sendKeys(mapValue);
+
+        }
+    }
+
+
 
 
 }
