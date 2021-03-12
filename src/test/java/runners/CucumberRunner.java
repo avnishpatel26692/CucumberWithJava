@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/Sample2.feature",
+        features = "src/test/resources/features/Task2.feature",
         plugin = {"pretty", "html:cucumber-report/html-report",
                 "junit:cucumber-report/junit-report.xml",
                 "json:cucumber-report/json-report.json"},
-        tags = {"@regression"},
+//        tags = {"@regression2"},
         dryRun = false, // if true then check if have created stepdefinitions, if not then it will create stepdefs
         glue = {"stepDefinitions"} //
 )
