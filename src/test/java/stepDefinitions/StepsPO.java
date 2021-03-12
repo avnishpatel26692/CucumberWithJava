@@ -52,14 +52,8 @@ public class StepsPO {
 
     @When("^I enter values using PO:$")
     public void i_enter_values_using_PO(Map<String, String> arg1) throws Throwable {
-        for(Map.Entry<String,String> map : arg1.entrySet())
-        {
-            String mapKey = map.getKey();
-            String mapValue = map.getValue();
-            WebElement element = driver.findElement(By.id(mapKey));
-            element.clear();
-            element.sendKeys(mapValue);
-        }
+        agePO.enterName(arg1.get("name"));
+        agePO.enterAge(arg1.get("age"));
     }
 
 
