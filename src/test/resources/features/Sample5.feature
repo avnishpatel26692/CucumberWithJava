@@ -22,3 +22,11 @@ Feature: Two Column Data Table
       | Ivan | 6 | Hello, Ivan, you are a kid |
       | Lusy | 15 | Hello, Lusy, you are a teenager  |
       | Lusy | 15 | Hello, Lusy, you are a kid |
+
+  @Sample5 @Test3
+  Scenario: 3 column Data Table
+    Given I have the following order
+      | vegetable | quantity | cost | Aviability |
+      | cucumber  |   4    |  10  | yes          |
+      | carrot    |   5    |   6  | no           |
+      | potato    |   6    |   4  | yes          |
