@@ -10,6 +10,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Map;
+
 
 public class Steps4PO {
 
@@ -46,6 +48,13 @@ public class Steps4PO {
     @Then("^I see message: \"([^\"]*)\" using PO$")
     public void i_see_message_using_PO(String arg1) throws Throwable {
         Assert.assertEquals(arg1, ageSubmittedPO.getMessage());
+    }
+    @When("^I enter values using PO:$")
+    public void i_enter_values_using_PO(Map<String, String> arg1) throws Throwable {
+        //System.out.println(arg1.get("name"));
+        agePO.enterName(arg1.get("name"));
+        //System.out.println(arg1.get("age"));
+        agePO.enterAge(arg1.get("age"));
     }
 
 }
