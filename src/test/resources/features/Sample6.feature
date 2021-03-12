@@ -5,7 +5,7 @@ Feature: Introduction to cucumber
 
   Background:
     Given User navigates to Age page
-    And click Submit button
+
 
   @SmokeTest @Test1
   Scenario: Navigate to Go to link page
