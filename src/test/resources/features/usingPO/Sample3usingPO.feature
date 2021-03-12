@@ -30,4 +30,4 @@ Feature: Introduction to cucumber part 4
     Then I see message: "<message>" using PO
     Examples:
       | name | age | message                      |
-      | Ivan  | 6   | Hello, Ivan, you are a kid    |
+      | Ivan  | 5  | Hello, Ivan, you are a kid    |

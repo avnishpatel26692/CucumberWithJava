@@ -90,15 +90,9 @@ public class Steps4PO {
         // For automatic transformation, change DataTable to one of
         // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
         // E,K,V must be a scalar (String, Integer, Date, enum etc)
-        for (Map.Entry<String, String> map : arg1.entrySet()) {
-            String mapKey = map.getKey(); //name , age
-            String mapValue = map.getValue(); //Ivan , 6
-            WebElement element = driver.findElement(By.id(mapKey));
-            element.clear();
-            element.sendKeys(mapValue);
-        }
-        //throw new PendingException()
-
+        agePO.enterName(arg1.get("name"));
+        agePO.enterAge(arg1.get("age"));
     }
+    //throw new PendingException()
 }
 
