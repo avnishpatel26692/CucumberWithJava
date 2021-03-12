@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.cs.A;
 import cucumber.api.java.en.And;
@@ -66,7 +67,7 @@ public class SampleSteps {
     @Given("^User navigate to Age Page$")
     public void user_navigate_to_Age_Page() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-       this.driver.get("https://kristinek.github.io/site/examples/age");
+        this.driver.get("https://kristinek.github.io/site/examples/age");
         //throw new PendingException();
     }
 
@@ -154,15 +155,14 @@ public class SampleSteps {
         // For automatic transformation, change DataTable to one of
         // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
         // E,K,V must be a scalar (String, Integer, Date, enum etc)
-            for(String value : arg1)
-            {
-                String Start_xpath = "//input[@type='checkbox'][@value='";
-                String checkboxName = value;
-                String end_xpath = "']";
-                String xpath = Start_xpath + checkboxName + end_xpath;
-                System.out.println("Xpath : " + xpath);
-                driver.findElement(By.xpath(xpath)).click();
-            }
+        for (String value : arg1) {
+            String Start_xpath = "//input[@type='checkbox'][@value='";
+            String checkboxName = value;
+            String end_xpath = "']";
+            String xpath = Start_xpath + checkboxName + end_xpath;
+            System.out.println("Xpath : " + xpath);
+            driver.findElement(By.xpath(xpath)).click();
+        }
         //throw new PendingException();
     }
 
@@ -180,6 +180,7 @@ public class SampleSteps {
         Assert.assertEquals(arg1, messageText.getText());
         //throw new PendingException();
     }
+
     @Given("^User navigates to Age Page$")
     public void user_navigates_to_Age_Page() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
@@ -193,7 +194,7 @@ public class SampleSteps {
         // For automatic transformation, change DataTable to one of
         // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
         // E,K,V must be a scalar (String, Integer, Date, enum etc)
-        for(Map.Entry<String, String> map : arg1.entrySet()) {
+        for (Map.Entry<String, String> map : arg1.entrySet()) {
             String mapKey = map.getKey(); //name , age
             String mapValue = map.getValue(); //Ivan , 6
             WebElement element = driver.findElement(By.id(mapKey));
@@ -201,7 +202,7 @@ public class SampleSteps {
             element.sendKeys(mapValue);
         }
     }
-        //throw new PendingException();
+    //throw new PendingException();
 
     @When("^Click on Submit button$")
     public void click_on_Submit_button() throws Throwable {
@@ -218,7 +219,27 @@ public class SampleSteps {
         Assert.assertEquals(arg1, messageText.getText());
     }
 
+    @Given("^I have the following order$")
+    public void i_have_the_following_order(DataTable arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        // For automatic transformation, change DataTable to one of
+        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+        // E,K,V must be a scalar (String, Integer, Date, enum etc)
+        // throw new PendingException();
+        for (Map<String, String> map : arg1.asMaps(String.class, String.class)) {
+            String vegetableName = map.get("vegetable"); //cucumber
+            String quantity = map.get("quantity"); //4
+            String price = map.get("cost"); //10
+            String aviability = map.get("Aviability");
+            System.out.println("Vegetable Name : " + vegetableName);
+            System.out.println("Quantity : " + quantity);
+            System.out.println("Cost : " + price);
+            System.out.println("Aviability : " + aviability);
+        }
+    }
 }
+
+
 
 
 
