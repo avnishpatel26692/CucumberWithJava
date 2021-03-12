@@ -60,7 +60,7 @@ public class SampleSteps {
         Assert.assertEquals("Lorem ipsum",driver.findElement(By.xpath("//h1[text()='Lorem ipsum']")).getText());
     }
 
-    @Given("^User navigates to Age Page$")
+    @And("^User navigates to Age Page$")
     public void user_navigates_to_Age_Page() throws Throwable {
         driver.get("https://kristinek.github.io/site/examples/age.html");
     }
