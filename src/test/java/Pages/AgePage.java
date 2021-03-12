@@ -14,6 +14,7 @@ public class AgePage {
     @FindBy(how = How.ID, using = "submit")
     private WebElement submitBtn;
 
+
     public String agePageUrl = "https://kristinek.github.io/site/examples/age.html" ;
 
     public void enterName(String name) {
@@ -29,6 +30,8 @@ public class AgePage {
         submitBtn.click();
 
     }
+
+
 
 
 }

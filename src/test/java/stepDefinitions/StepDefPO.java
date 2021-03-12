@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import Pages.AgePage;
 import Pages.AgeSubmittedPage;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,6 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import cucumber.api.PendingException;
 
+import java.util.Map;
 
 
 public class StepDefPO {
@@ -61,4 +63,26 @@ public class StepDefPO {
 
     }
 
+
+    @When("^I enter values using PO:$")
+    public void iEnterValuesUsingPO(Map <String, String> arg1) {
+        for(Map.Entry<String, String> map : arg1.entrySet())
+        {
+            String mapKey = map.getKey();
+            String mapValue = map.getValue();
+            WebElement element = driver.findElement(By.id(mapKey));
+            element.clear();
+            element.sendKeys(mapValue);
+        }
+    }
+
+    @And("^I click submit age using PO$")
+    public void iClickSubmitAgeUsingPO() {
+        driver.findElement(By.id("submit")).click();
+    }
+
+    @Then("^I see message: \"([^\"]*)\" using PO$")
+    public void iSeeMessageUsingPO(String arg1) throws Throwable {
+        Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
+    }
 }
