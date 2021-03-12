@@ -32,57 +32,50 @@ public class StepDefPO {
 
     @Given("^User navigates to Age page using PO$")
     public void user_navigates_to_Age_page_using_PO() throws Throwable {
-        driver.get("https://kristinek.github.io/site/examples/age");
-
+        driver.get(agePO.agePageUrl);
     }
 
     @When("^user enter name using PO : \"([^\"]*)\"$")
     public void user_enter_name_using_PO(String arg1) throws Throwable {
-        WebElement nameText = driver.findElement(By.id("name"));
-        nameText.clear();
-        nameText.sendKeys(arg1);
+        agePO.enterName(arg1);
 
     }
 
     @When("^user enter age using PO : \"([^\"]*)\"$")
-    public void user_enter_age_using_PO(String arg1) throws Throwable {
-        WebElement ageText = driver.findElement(By.id("age"));
-        ageText.sendKeys("" + arg1);
+    public void user_enter_age_using_PO(int arg1) throws Throwable {
+        agePO.enterAge("" +arg1);
 
     }
 
     @When("^click Submit button using PO$")
     public void click_Submit_button_using_PO() throws Throwable {
-        driver.findElement(By.id("submit")).click();
+        agePO.clickOnSubmitBtn();
 
     }
 
     @Then("^user see message using PO : \"([^\"]*)\"$")
     public void user_see_message_using_PO(String arg1) throws Throwable {
-        Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
+        Assert.assertEquals(arg1, ageSubmittedPagePO.getMessage());
 
     }
 
 
     @When("^I enter values using PO:$")
     public void iEnterValuesUsingPO(Map <String, String> arg1) {
-        for(Map.Entry<String, String> map : arg1.entrySet())
-        {
-            String mapKey = map.getKey();
-            String mapValue = map.getValue();
-            WebElement element = driver.findElement(By.id(mapKey));
-            element.clear();
-            element.sendKeys(mapValue);
-        }
+        System.out.println(arg1.get("name"));
+        agePO.enterName("name");
+        System.out.println(arg1.get("age"));
+        agePO.enterName("age");
+
     }
 
-    @And("^I click submit age using PO$")
-    public void iClickSubmitAgeUsingPO() {
-        driver.findElement(By.id("submit")).click();
-    }
+//    @And("^I click submit age using PO$")
+//    public void iClickSubmitAgeUsingPO() {
+//        driver.findElement(By.id("submit")).click();
+//    }
 
-    @Then("^I see message: \"([^\"]*)\" using PO$")
-    public void iSeeMessageUsingPO(String arg1) throws Throwable {
-        Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
-    }
+//    @Then("^I see message: \"([^\"]*)\" using PO$")
+//    public void iSeeMessageUsingPO(String arg1) throws Throwable {
+//        Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
+//    }
 }

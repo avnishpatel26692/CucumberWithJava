@@ -6,13 +6,13 @@ import org.openqa.selenium.support.How;
 
 public class AgePage {
     @FindBy(how = How.ID, using = "name")
-    private WebElement nameText;
+    WebElement nameText;
 
     @FindBy(how = How.ID, using = "age")
-    private WebElement nameAge;
+    WebElement nameAge;
 
     @FindBy(how = How.ID, using = "submit")
-    private WebElement submitBtn;
+    WebElement submitBtn;
 
 
     public String agePageUrl = "https://kristinek.github.io/site/examples/age.html" ;
