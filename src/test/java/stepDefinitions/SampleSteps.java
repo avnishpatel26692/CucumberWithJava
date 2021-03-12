@@ -171,9 +171,11 @@ public class SampleSteps {
             String vegetableName = map.get("vegetable"); //cucumber
             String quantity = map.get("quantity"); //4
             String price = map.get("cost"); //10
+            String availability = map.get("availability");
             System.out.println("Vegetable Name : " +vegetableName);
             System.out.println("Quantity : " +quantity);
             System.out.println("Cost : " +price);
+            System.out.println("Availability : " +availability);
         }
     }
 
