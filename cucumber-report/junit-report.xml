@@ -1,23 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="15.732472">
-<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.533544">
-<system-out><![CDATA[Given I am on action page...................................................passed
-When I clicked on checkboxes:...............................................passed
-And I click the result checkbox button......................................passed
-Then message for checkboxes "You selected value(s): Option 1, Option 3" is seen.passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="10.75936">
+<testcase classname="Introduction to cucumber part 2" name="a new scenario 1 with regex" time="5.491936">
+<system-out><![CDATA[Given I am on age page using PO.............................................passed
+When I enter name: "Ann" using PO...........................................passed
+And I enter age: 5 using PO.................................................passed
+And I click submit age using PO.............................................passed
+Then I see message: "Hello, Ann, you are a kid" using PO....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.074464">
-<system-out><![CDATA[Given I am on action page...................................................passed
-When I clicked on checkboxes:...............................................passed
-And I click the result checkbox button......................................passed
-Then message for checkboxes "You selected value(s): Option 2" is seen.......passed
-]]></system-out>
-</testcase>
-<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.124464">
-<system-out><![CDATA[Given I am on action page...................................................passed
-When I clicked on checkboxes:...............................................passed
-And I click the result checkbox button......................................passed
-Then message for checkboxes "You selected value(s): Option 1, Option 2, Option 3" is seen.passed
+<testcase classname="Introduction to cucumber part 2" name="a new scenario 2 with regex" time="5.267424">
+<system-out><![CDATA[Given I am on age page using PO.............................................passed
+When I enter name: "Bob" using PO...........................................passed
+And I enter age: 61 using PO................................................passed
+And I click submit age using PO.............................................passed
+Then I see message: "Hello, Bob, you are an adult" using PO.................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -1,282 +1,203 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Sample6.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Sample2UsingPO.feature");
 formatter.feature({
-  "line": 1,
-  "name": "Data Table Examples",
-  "description": "",
-  "id": "data-table-examples",
-  "keyword": "Feature"
+  "line": 2,
+  "name": "Introduction to cucumber part 2",
+  "description": "As a test engineer\r\nI want to be able to write and execute a scenario with parameters",
+  "id": "introduction-to-cucumber-part-2",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@regression"
+    }
+  ]
 });
 formatter.before({
-  "duration": 1337307400,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "I am on action page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "Sample4Steps.i_am_on_action_page()"
-});
-formatter.result({
-  "duration": 978054400,
+  "duration": 1344965200,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 6,
-  "name": "a new scenario with 1-row table",
+  "line": 5,
+  "name": "a new scenario 1 with regex",
   "description": "",
-  "id": "data-table-examples;a-new-scenario-with-1-row-table",
+  "id": "introduction-to-cucumber-part-2;a-new-scenario-1-with-regex",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
+  "line": 6,
+  "name": "I am on age page using PO",
+  "keyword": "Given "
+});
+formatter.step({
   "line": 7,
-  "name": "I clicked on checkboxes:",
-  "rows": [
-    {
-      "cells": [
-        "Option 1"
-      ],
-      "line": 8
-    },
-    {
-      "cells": [
-        "Option 3"
-      ],
-      "line": 9
-    }
-  ],
+  "name": "I enter name: \"Ann\" using PO",
   "keyword": "When "
 });
 formatter.step({
-  "line": 10,
-  "name": "I click the result checkbox button",
+  "line": 8,
+  "name": "I enter age: 5 using PO",
   "keyword": "And "
 });
 formatter.step({
-  "line": 11,
-  "name": "message for checkboxes \"You selected value(s): Option 1, Option 3\" is seen",
+  "line": 9,
+  "name": "I click submit age using PO",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 10,
+  "name": "I see message: \"Hello, Ann, you are a kid\" using PO",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
+  "location": "Steps4PO.i_am_on_age_page_using_PO()"
 });
 formatter.result({
-  "duration": 85911100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample4Steps.i_click_the_result_checkbox_button()"
-});
-formatter.result({
-  "duration": 31032300,
+  "duration": 853137100,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "You selected value(s): Option 1, Option 3",
-      "offset": 24
+      "val": "Ann",
+      "offset": 15
     }
   ],
-  "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
+  "location": "Steps4PO.i_enter_name_using_PO(String)"
 });
 formatter.result({
-  "duration": 18903100,
+  "duration": 76733500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 13
+    }
+  ],
+  "location": "Steps4PO.i_enter_age_using_PO(int)"
+});
+formatter.result({
+  "duration": 36031900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Steps4PO.i_click_submit_age_using_PO()"
+});
+formatter.result({
+  "duration": 77296000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Hello, Ann, you are a kid",
+      "offset": 16
+    }
+  ],
+  "location": "Steps4PO.i_see_message_using_PO(String)"
+});
+formatter.result({
+  "duration": 17821300,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3082335300,
+  "duration": 3085951000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 994794700,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "I am on action page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "Sample4Steps.i_am_on_action_page()"
-});
-formatter.result({
-  "duration": 897002800,
+  "duration": 997146600,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 13,
-  "name": "a new scenario with 1-row table",
+  "line": 12,
+  "name": "a new scenario 2 with regex",
   "description": "",
-  "id": "data-table-examples;a-new-scenario-with-1-row-table",
+  "id": "introduction-to-cucumber-part-2;a-new-scenario-2-with-regex",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
+  "line": 13,
+  "name": "I am on age page using PO",
+  "keyword": "Given "
+});
+formatter.step({
   "line": 14,
-  "name": "I clicked on checkboxes:",
-  "rows": [
-    {
-      "cells": [
-        "Option 2"
-      ],
-      "line": 15
-    }
-  ],
+  "name": "I enter name: \"Bob\" using PO",
   "keyword": "When "
 });
 formatter.step({
+  "line": 15,
+  "name": "I enter age: 61 using PO",
+  "keyword": "And "
+});
+formatter.step({
   "line": 16,
-  "name": "I click the result checkbox button",
+  "name": "I click submit age using PO",
   "keyword": "And "
 });
 formatter.step({
   "line": 17,
-  "name": "message for checkboxes \"You selected value(s): Option 2\" is seen",
+  "name": "I see message: \"Hello, Bob, you are an adult\" using PO",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
+  "location": "Steps4PO.i_am_on_age_page_using_PO()"
 });
 formatter.result({
-  "duration": 41960800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample4Steps.i_click_the_result_checkbox_button()"
-});
-formatter.result({
-  "duration": 32404100,
+  "duration": 866128000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "You selected value(s): Option 2",
-      "offset": 24
+      "val": "Bob",
+      "offset": 15
     }
   ],
-  "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
+  "location": "Steps4PO.i_enter_name_using_PO(String)"
 });
 formatter.result({
-  "duration": 18375400,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3089926300,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 994523000,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "I am on action page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "Sample4Steps.i_am_on_action_page()"
-});
-formatter.result({
-  "duration": 881606700,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 20,
-  "name": "a new scenario with 1-row table",
-  "description": "",
-  "id": "data-table-examples;a-new-scenario-with-1-row-table",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 21,
-  "name": "I clicked on checkboxes:",
-  "rows": [
-    {
-      "cells": [
-        "Option 1"
-      ],
-      "line": 22
-    },
-    {
-      "cells": [
-        "Option 2"
-      ],
-      "line": 23
-    },
-    {
-      "cells": [
-        "Option 3"
-      ],
-      "line": 24
-    }
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 25,
-  "name": "I click the result checkbox button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "message for checkboxes \"You selected value(s): Option 1, Option 2, Option 3\" is seen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
-});
-formatter.result({
-  "duration": 114372100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Sample4Steps.i_click_the_result_checkbox_button()"
-});
-formatter.result({
-  "duration": 31931600,
+  "duration": 71984300,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "You selected value(s): Option 1, Option 2, Option 3",
-      "offset": 24
+      "val": "61",
+      "offset": 13
     }
   ],
-  "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
+  "location": "Steps4PO.i_enter_age_using_PO(int)"
 });
 formatter.result({
-  "duration": 17769500,
+  "duration": 35515600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Steps4PO.i_click_submit_age_using_PO()"
+});
+formatter.result({
+  "duration": 183888100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Hello, Bob, you are an adult",
+      "offset": 16
+    }
+  ],
+  "location": "Steps4PO.i_see_message_using_PO(String)"
+});
+formatter.result({
+  "duration": 17408000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3084260600,
+  "duration": 3095353400,
   "status": "passed"
 });
 });

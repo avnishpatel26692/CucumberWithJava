@@ -1,33 +1,12 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
-      {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 978054400,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "I am on action page",
-            "match": {
-              "location": "Sample4Steps.i_am_on_action_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
       {
         "before": [
           {
             "result": {
-              "duration": 1337307400,
+              "duration": 1344965200,
               "status": "passed"
             },
             "match": {
@@ -35,14 +14,14 @@
             }
           }
         ],
-        "line": 6,
-        "name": "a new scenario with 1-row table",
+        "line": 5,
+        "name": "a new scenario 1 with regex",
         "description": "",
-        "id": "data-table-examples;a-new-scenario-with-1-row-table",
+        "id": "introduction-to-cucumber-part-2;a-new-scenario-1-with-regex",
         "after": [
           {
             "result": {
-              "duration": 3082335300,
+              "duration": 3085951000,
               "status": "passed"
             },
             "match": {
@@ -55,80 +34,81 @@
         "steps": [
           {
             "result": {
-              "duration": 85911100,
+              "duration": 853137100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on age page using PO",
+            "match": {
+              "location": "Steps4PO.i_am_on_age_page_using_PO()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 76733500,
               "status": "passed"
             },
             "line": 7,
-            "name": "I clicked on checkboxes:",
+            "name": "I enter name: \"Ann\" using PO",
             "match": {
-              "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
+              "arguments": [
+                {
+                  "val": "Ann",
+                  "offset": 15
+                }
+              ],
+              "location": "Steps4PO.i_enter_name_using_PO(String)"
             },
-            "rows": [
-              {
-                "cells": [
-                  "Option 1"
-                ],
-                "line": 8
-              },
-              {
-                "cells": [
-                  "Option 3"
-                ],
-                "line": 9
-              }
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 31032300,
+              "duration": 36031900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter age: 5 using PO",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 13
+                }
+              ],
+              "location": "Steps4PO.i_enter_age_using_PO(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 77296000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click submit age using PO",
+            "match": {
+              "location": "Steps4PO.i_click_submit_age_using_PO()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17821300,
               "status": "passed"
             },
             "line": 10,
-            "name": "I click the result checkbox button",
-            "match": {
-              "location": "Sample4Steps.i_click_the_result_checkbox_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 18903100,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "message for checkboxes \"You selected value(s): Option 1, Option 3\" is seen",
+            "name": "I see message: \"Hello, Ann, you are a kid\" using PO",
             "match": {
               "arguments": [
                 {
-                  "val": "You selected value(s): Option 1, Option 3",
-                  "offset": 24
+                  "val": "Hello, Ann, you are a kid",
+                  "offset": 16
                 }
               ],
-              "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
+              "location": "Steps4PO.i_see_message_using_PO(String)"
             },
             "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 897002800,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "I am on action page",
-            "match": {
-              "location": "Sample4Steps.i_am_on_action_page()"
-            },
-            "keyword": "Given "
           }
         ]
       },
@@ -136,7 +116,7 @@
         "before": [
           {
             "result": {
-              "duration": 994794700,
+              "duration": 997146600,
               "status": "passed"
             },
             "match": {
@@ -144,14 +124,14 @@
             }
           }
         ],
-        "line": 13,
-        "name": "a new scenario with 1-row table",
+        "line": 12,
+        "name": "a new scenario 2 with regex",
         "description": "",
-        "id": "data-table-examples;a-new-scenario-with-1-row-table",
+        "id": "introduction-to-cucumber-part-2;a-new-scenario-2-with-regex",
         "after": [
           {
             "result": {
-              "duration": 3089926300,
+              "duration": 3095353400,
               "status": "passed"
             },
             "match": {
@@ -164,176 +144,95 @@
         "steps": [
           {
             "result": {
-              "duration": 41960800,
+              "duration": 866128000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I am on age page using PO",
+            "match": {
+              "location": "Steps4PO.i_am_on_age_page_using_PO()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 71984300,
               "status": "passed"
             },
             "line": 14,
-            "name": "I clicked on checkboxes:",
+            "name": "I enter name: \"Bob\" using PO",
             "match": {
-              "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
+              "arguments": [
+                {
+                  "val": "Bob",
+                  "offset": 15
+                }
+              ],
+              "location": "Steps4PO.i_enter_name_using_PO(String)"
             },
-            "rows": [
-              {
-                "cells": [
-                  "Option 2"
-                ],
-                "line": 15
-              }
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 32404100,
+              "duration": 35515600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I enter age: 61 using PO",
+            "match": {
+              "arguments": [
+                {
+                  "val": "61",
+                  "offset": 13
+                }
+              ],
+              "location": "Steps4PO.i_enter_age_using_PO(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 183888100,
               "status": "passed"
             },
             "line": 16,
-            "name": "I click the result checkbox button",
+            "name": "I click submit age using PO",
             "match": {
-              "location": "Sample4Steps.i_click_the_result_checkbox_button()"
+              "location": "Steps4PO.i_click_submit_age_using_PO()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 18375400,
+              "duration": 17408000,
               "status": "passed"
             },
             "line": 17,
-            "name": "message for checkboxes \"You selected value(s): Option 2\" is seen",
+            "name": "I see message: \"Hello, Bob, you are an adult\" using PO",
             "match": {
               "arguments": [
                 {
-                  "val": "You selected value(s): Option 2",
-                  "offset": 24
+                  "val": "Hello, Bob, you are an adult",
+                  "offset": 16
                 }
               ],
-              "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 881606700,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "I am on action page",
-            "match": {
-              "location": "Sample4Steps.i_am_on_action_page()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 994523000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.openBrowser()"
-            }
-          }
-        ],
-        "line": 20,
-        "name": "a new scenario with 1-row table",
-        "description": "",
-        "id": "data-table-examples;a-new-scenario-with-1-row-table",
-        "after": [
-          {
-            "result": {
-              "duration": 3084260600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.embedScreenshot(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 114372100,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I clicked on checkboxes:",
-            "match": {
-              "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Option 1"
-                ],
-                "line": 22
-              },
-              {
-                "cells": [
-                  "Option 2"
-                ],
-                "line": 23
-              },
-              {
-                "cells": [
-                  "Option 3"
-                ],
-                "line": 24
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 31931600,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "I click the result checkbox button",
-            "match": {
-              "location": "Sample4Steps.i_click_the_result_checkbox_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 17769500,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "message for checkboxes \"You selected value(s): Option 1, Option 2, Option 3\" is seen",
-            "match": {
-              "arguments": [
-                {
-                  "val": "You selected value(s): Option 1, Option 2, Option 3",
-                  "offset": 24
-                }
-              ],
-              "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
+              "location": "Steps4PO.i_see_message_using_PO(String)"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Data Table Examples",
-    "description": "",
-    "id": "data-table-examples",
+    "name": "Introduction to cucumber part 2",
+    "description": "As a test engineer\r\nI want to be able to write and execute a scenario with parameters",
+    "id": "introduction-to-cucumber-part-2",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/Sample6.feature"
+    "uri": "src/test/resources/features/Sample2UsingPO.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@regression"
+      }
+    ]
   }
 ]
