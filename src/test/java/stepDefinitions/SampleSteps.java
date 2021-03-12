@@ -75,7 +75,7 @@ public class SampleSteps {
     }
 
     @And("^user is on home page$")
-        public void userOnHomePage() throws Throwable {
+    public void userOnHomePage() throws Throwable {
         throw new PendingException();
     }
 
@@ -86,7 +86,7 @@ public class SampleSteps {
 
     @Then("^User should verify page is opened correctly$")
     public void userShouldVerifyPageIsOpenedCorrectly() {
-        Assert.assertEquals("Lorem ipsum",driver.findElement(By.xpath("//h1[text()='Lorem ipsum']")).getText());
+        Assert.assertEquals("Lorem ipsum", driver.findElement(By.xpath("//h1[text()='Lorem ipsum']")).getText());
     }
 
     @Given("^User navigates to Age page$")
@@ -96,15 +96,15 @@ public class SampleSteps {
 
     @When("^user enter name : \"([^\"]*)\"$")
     public void userEnterName(String arg1) throws Throwable {
-       WebElement nameText = driver.findElement(By.id("name"));
-       nameText.clear();
-       nameText.sendKeys(arg1);
+        WebElement nameText = driver.findElement(By.id("name"));
+        nameText.clear();
+        nameText.sendKeys(arg1);
     }
 
     @And("^user enter age : \"([^\"]*)\"$")
     public void userEnterAge(int arg1) throws Throwable {
         WebElement ageText = driver.findElement(By.id("age"));
-        ageText.sendKeys("" +arg1);
+        ageText.sendKeys("" + arg1);
 
     }
 
@@ -208,9 +208,6 @@ public class SampleSteps {
     }
 
 
-
-
-
     @Given("^I am on number page$")
     public void iAmOnNumberPage() {
         driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
@@ -224,7 +221,7 @@ public class SampleSteps {
 
     @And("^I click submit number$")
     public void iClickSubmitNumber() {
-        driver.findElement(By.xpath("//button[text()='Submit']"));
+        driver.findElement(By.xpath("//button[text()='Submit']")).click();
     }
 
     @Then("^I see a message: \"([^\"]*)\"$")
@@ -254,6 +251,10 @@ public class SampleSteps {
         Assert.assertEquals("Square root of 64 is 8.00", message);
 //        Assert.assertEquals(arg1, driver.findElement(By.id("w3-input w3-border w3-pale-red required")).getText());
     }
+
+
+
+
 }
 
 
