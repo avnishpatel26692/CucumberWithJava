@@ -70,4 +70,18 @@ public class SampleSteps2 {
         Assert.assertEquals(arg1, driver.findElement(By.id("message")).getText());
     }
 
+
+    @When("^User enter details$")
+    public void userEnterDetails(Map<String, String> arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        for(Map.Entry<String, String> map : arg1.entrySet())
+        {
+            String mapKey = map.getKey(); //name , age
+            String mapValue = map.getValue(); //Ann , 5
+            WebElement element = driver.findElement(By.id(mapKey));
+            element.clear();
+            element.sendKeys(mapValue);
+        }
+    }
+
 }
