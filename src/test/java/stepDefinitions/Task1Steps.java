@@ -12,12 +12,12 @@ public class Task1Steps {
     private WebDriver driver;
 
     public Task1Steps() {
-        this.driver = Hooks.driver;
+        this.driver = Init.driver;
     }
 
     @Given("^I am on number page$")
     public void i_am_on_number_page() throws Throwable {
-        driver.get("https://kristinek.github.io/site/tasks/enter_a_number\n");
+        driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
     }
 
     @When("^I enter number: \"([^\"]*)\"$")

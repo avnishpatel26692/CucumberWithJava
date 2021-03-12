@@ -1,20 +1,10 @@
 package stepDefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import cucumber.api.java.en_scouse.An;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertFalse;
@@ -23,7 +13,7 @@ public class SampleSteps {
     private WebDriver driver;
 
     public SampleSteps() {
-        this.driver = Hooks.driver;
+        this.driver = Init.driver;
     }
 
     @Given("^I am on the home page$")
