@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="15.617973">
-<testcase classname="Testing error cases and correct number case" name="Testing error cases" time="5.496125">
-<system-out><![CDATA[Given I am on number page...................................................passed
-When I enter number: dad....................................................passed
-And I click submit number...................................................passed
-Then I see a message: Please enter a number.................................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="15.657855">
+<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.451948">
+<system-out><![CDATA[Given I am on action page...................................................passed
+When I clicked on checkboxes:...............................................passed
+And I click the result checkbox button......................................passed
+Then message for checkboxes "You selected value(s): Option 1, Option 3" is seen.passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing error cases and correct number case" name="Testing error cases 2" time="5.061559">
-<system-out><![CDATA[Given I am on number page...................................................passed
-When I enter number: 101....................................................passed
-And I click submit number...................................................passed
-Then I see a message: Number is too big.....................................passed
+<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.08491">
+<system-out><![CDATA[Given I am on action page...................................................passed
+When I clicked on checkboxes:...............................................passed
+And I click the result checkbox button......................................passed
+Then message for checkboxes "You selected value(s): Option 2" is seen.......passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing error cases and correct number case" name="Testing error cases 3" time="5.060289">
-<system-out><![CDATA[Given I am on number page...................................................passed
-When I enter number: 45.....................................................passed
-And I click submit number...................................................passed
-Then I see a message: Number is too small...................................passed
+<testcase classname="Data Table Examples" name="a new scenario with 1-row table" time="5.120997">
+<system-out><![CDATA[Given I am on action page...................................................passed
+When I clicked on checkboxes:...............................................passed
+And I click the result checkbox button......................................passed
+Then message for checkboxes "You selected value(s): Option 1, Option 2, Option 3" is seen.passed
 ]]></system-out>
 </testcase>
 </testsuite>

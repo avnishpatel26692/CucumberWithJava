@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 1349099000,
+              "duration": 1330951799,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 12,
-        "name": "Testing error cases",
+        "line": 3,
+        "name": "a new scenario with 1-row table",
         "description": "",
-        "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;2",
+        "id": "data-table-examples;a-new-scenario-with-1-row-table",
         "after": [
           {
             "result": {
-              "duration": 3090116100,
+              "duration": 3118358501,
               "status": "passed"
             },
             "match": {
@@ -30,67 +30,75 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 950379500,
+              "duration": 866885600,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I am on number page",
+            "line": 4,
+            "name": "I am on action page",
             "match": {
-              "location": "SampleSteps.i_am_on_number_page()"
+              "location": "Sample4Steps.i_am_on_action_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 57698400,
+              "duration": 83586500,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I enter number: dad",
+            "line": 5,
+            "name": "I clicked on checkboxes:",
             "match": {
-              "location": "SampleSteps.i_enter_number_dad()"
+              "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
             },
-            "matchedColumns": [
-              0
+            "rows": [
+              {
+                "cells": [
+                  "Option 1"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "Option 3"
+                ],
+                "line": 7
+              }
             ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 31381800,
+              "duration": 30952701,
               "status": "passed"
             },
             "line": 8,
-            "name": "I click submit number",
+            "name": "I click the result checkbox button",
             "match": {
-              "location": "SampleSteps.i_click_submit_number()"
+              "location": "Sample4Steps.i_click_the_result_checkbox_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 17449900,
+              "duration": 21212699,
               "status": "passed"
             },
             "line": 9,
-            "name": "I see a message: Please enter a number",
+            "name": "message for checkboxes \"You selected value(s): Option 1, Option 3\" is seen",
             "match": {
-              "location": "SampleSteps.i_see_a_message_Please_enter_a_number()"
+              "arguments": [
+                {
+                  "val": "You selected value(s): Option 1, Option 3",
+                  "offset": 24
+                }
+              ],
+              "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
             },
-            "matchedColumns": [
-              1
-            ],
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 4,
-            "name": "@Scenario1"
           }
         ]
       },
@@ -98,7 +106,7 @@
         "before": [
           {
             "result": {
-              "duration": 1002470800,
+              "duration": 1017392701,
               "status": "passed"
             },
             "match": {
@@ -106,14 +114,14 @@
             }
           }
         ],
-        "line": 13,
-        "name": "Testing error cases",
+        "line": 11,
+        "name": "a new scenario with 1-row table",
         "description": "",
-        "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;3",
+        "id": "data-table-examples;a-new-scenario-with-1-row-table",
         "after": [
           {
             "result": {
-              "duration": 3089865800,
+              "duration": 3089347801,
               "status": "passed"
             },
             "match": {
@@ -122,73 +130,69 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 862903500,
+              "duration": 875542099,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I am on number page",
+            "line": 12,
+            "name": "I am on action page",
             "match": {
-              "location": "SampleSteps.i_am_on_number_page()"
+              "location": "Sample4Steps.i_am_on_action_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 55233100,
+              "duration": 45253200,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I enter number: 101",
+            "line": 13,
+            "name": "I clicked on checkboxes:",
             "match": {
-              "arguments": [
-                {
-                  "val": "101",
-                  "offset": 16
-                }
-              ],
-              "location": "SampleSteps.i_enter_number(int)"
+              "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
             },
-            "matchedColumns": [
-              0
+            "rows": [
+              {
+                "cells": [
+                  "Option 2"
+                ],
+                "line": 14
+              }
             ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 34327100,
+              "duration": 37697400,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I click submit number",
+            "line": 15,
+            "name": "I click the result checkbox button",
             "match": {
-              "location": "SampleSteps.i_click_submit_number()"
+              "location": "Sample4Steps.i_click_the_result_checkbox_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 16758600,
+              "duration": 19676300,
               "status": "passed"
             },
-            "line": 9,
-            "name": "I see a message: Number is too big",
+            "line": 16,
+            "name": "message for checkboxes \"You selected value(s): Option 2\" is seen",
             "match": {
-              "location": "SampleSteps.i_see_a_message_Number_is_too_big()"
+              "arguments": [
+                {
+                  "val": "You selected value(s): Option 2",
+                  "offset": 24
+                }
+              ],
+              "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
             },
-            "matchedColumns": [
-              1
-            ],
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 4,
-            "name": "@Scenario1"
           }
         ]
       },
@@ -196,7 +200,7 @@
         "before": [
           {
             "result": {
-              "duration": 991609200,
+              "duration": 989110900,
               "status": "passed"
             },
             "match": {
@@ -204,14 +208,14 @@
             }
           }
         ],
-        "line": 14,
-        "name": "Testing error cases",
+        "line": 19,
+        "name": "a new scenario with 1-row table",
         "description": "",
-        "id": "testing-error-cases-and-correct-number-case;testing-error-cases;;4",
+        "id": "data-table-examples;a-new-scenario-with-1-row-table",
         "after": [
           {
             "result": {
-              "duration": 3096888000,
+              "duration": 3092085800,
               "status": "passed"
             },
             "match": {
@@ -220,81 +224,89 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 869983500,
+              "duration": 879823600,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I am on number page",
+            "line": 20,
+            "name": "I am on action page",
             "match": {
-              "location": "SampleSteps.i_am_on_number_page()"
+              "location": "Sample4Steps.i_am_on_action_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 50421100,
+              "duration": 113780599,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I enter number: 45",
+            "line": 21,
+            "name": "I clicked on checkboxes:",
             "match": {
-              "arguments": [
-                {
-                  "val": "45",
-                  "offset": 16
-                }
-              ],
-              "location": "SampleSteps.i_enter_number(int)"
+              "location": "Sample4Steps.i_clicked_on_checkboxes(String\u003e)"
             },
-            "matchedColumns": [
-              0
+            "rows": [
+              {
+                "cells": [
+                  "Option 1"
+                ],
+                "line": 22
+              },
+              {
+                "cells": [
+                  "Option 2"
+                ],
+                "line": 23
+              },
+              {
+                "cells": [
+                  "Option 3"
+                ],
+                "line": 24
+              }
             ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 35518200,
+              "duration": 27933000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I click submit number",
+            "line": 25,
+            "name": "I click the result checkbox button",
             "match": {
-              "location": "SampleSteps.i_click_submit_number()"
+              "location": "Sample4Steps.i_click_the_result_checkbox_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 15869300,
+              "duration": 18263199,
               "status": "passed"
             },
-            "line": 9,
-            "name": "I see a message: Number is too small",
+            "line": 26,
+            "name": "message for checkboxes \"You selected value(s): Option 1, Option 2, Option 3\" is seen",
             "match": {
-              "location": "SampleSteps.i_see_a_message_Number_is_too_small()"
+              "arguments": [
+                {
+                  "val": "You selected value(s): Option 1, Option 2, Option 3",
+                  "offset": 24
+                }
+              ],
+              "location": "Sample4Steps.message_for_checkboxes_is_seen(String)"
             },
-            "matchedColumns": [
-              1
-            ],
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 4,
-            "name": "@Scenario1"
           }
         ]
       }
     ],
-    "name": "Testing error cases and correct number case",
-    "description": "//#https://kristinek.github.io/site/tasks/enter_a_number",
-    "id": "testing-error-cases-and-correct-number-case",
+    "name": "Data Table Examples",
+    "description": "",
+    "id": "data-table-examples",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/Task1.feature"
+    "uri": "src/test/resources/features/Sample4.feature"
   }
 ]
