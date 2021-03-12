@@ -29,3 +29,11 @@ Feature: Two column data tables
       |  Ann   | 5   | Hello, Ann, you are a kid   |
       |  Robin | 15  |    Hello, Robin, you are a teenager  |
       |     Sam|15   |     Hello, Sam, you are a Kid   |
+
+    @Sample5 @Test3
+      Scenario: 3 column data table
+      Given i have the following order
+      |vegetable|amount|cost|
+      |cucumber |4     |10  |
+      |carrot   |5     |6   |
+      |potato   |6     |4   |
