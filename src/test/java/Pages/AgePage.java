@@ -36,12 +36,4 @@ public class AgePage {
         subBtn.click();
     }
 
-    public void enterBoth(String name, String age){
-        nameText.clear();
-        nameText.sendKeys(name);
-        ageText.sendKeys(age);
-    }
-
-
-
 }
