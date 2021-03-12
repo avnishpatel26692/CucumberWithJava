@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.cs.A;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -22,6 +23,7 @@ import static org.junit.Assert.assertFalse;
 
 public class SampleSteps {
     private WebDriver driver;
+
 
     public SampleSteps() {
         this.driver = Hooks.driver;
@@ -110,7 +112,7 @@ public class SampleSteps {
     public void i_enter_number(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         WebElement ageText = this.driver.findElement(By.id("numb"));
-        ageText.sendKeys(new CharSequence[]{arg1});
+        ageText.sendKeys(arg1);
         //throw new PendingException();
     }
 
@@ -138,6 +140,84 @@ public class SampleSteps {
         Assert.assertEquals(arg1, message);
         //throw new PendingException();
     }
+
+    @Given("^I am on action page$")
+    public void i_am_on_action_page() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        driver.get("https://kristinek.github.io/site/examples/actions");
+        //throw new PendingException();
+    }
+
+    @When("^I clicked on checkboxes:$")
+    public void i_clicked_on_checkboxes(List<String> arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        // For automatic transformation, change DataTable to one of
+        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+        // E,K,V must be a scalar (String, Integer, Date, enum etc)
+            for(String value : arg1)
+            {
+                String Start_xpath = "//input[@type='checkbox'][@value='";
+                String checkboxName = value;
+                String end_xpath = "']";
+                String xpath = Start_xpath + checkboxName + end_xpath;
+                System.out.println("Xpath : " + xpath);
+                driver.findElement(By.xpath(xpath)).click();
+            }
+        //throw new PendingException();
+    }
+
+    @When("^I click the result checkbox button$")
+    public void i_click_the_result_checkbox_button() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        this.driver.findElement(By.id("result_button_checkbox")).click();
+        //throw new PendingException();
+    }
+
+    @Then("^message for checkboxes \"([^\"]*)\" is seen$")
+    public void message_for_checkboxes_is_seen(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        WebElement messageText = this.driver.findElement(By.id("result_checkbox"));
+        Assert.assertEquals(arg1, messageText.getText());
+        //throw new PendingException();
+    }
+    @Given("^User navigates to Age Page$")
+    public void user_navigates_to_Age_Page() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        driver.get("https://kristinek.github.io/site/examples/age");
+        // throw new PendingException();
+    }
+
+    @When("^User enter details$")
+    public void user_enter_details(Map<String, String> arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        // For automatic transformation, change DataTable to one of
+        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+        // E,K,V must be a scalar (String, Integer, Date, enum etc)
+        for(Map.Entry<String, String> map : arg1.entrySet()) {
+            String mapKey = map.getKey(); //name , age
+            String mapValue = map.getValue(); //Ivan , 6
+            WebElement element = driver.findElement(By.id(mapKey));
+            element.clear();
+            element.sendKeys(mapValue);
+        }
+    }
+        //throw new PendingException();
+
+    @When("^Click on Submit button$")
+    public void click_on_Submit_button() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        this.driver.findElement(By.id("submit")).click();
+        //throw new PendingException();
+    }
+
+    @Then("^User see message : \"([^\"]*)\"$")
+    public void user_see_message1(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+        WebElement messageText = this.driver.findElement(By.id("message"));
+        Assert.assertEquals(arg1, messageText.getText());
+    }
+
 }
 
 
