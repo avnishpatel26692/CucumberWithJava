@@ -32,3 +32,11 @@ Feature: Two Column Data Table
       | cucumber  |   4    |  10  |  40   |
       | carrot    |   5    |   6  |  30   |
       | potato    |   6    |   4  |  24   |
+
+  @Sample5 @Test3-1
+  Scenario: 6 column Data Table
+    Given I have the following order in webshop
+      | clothes   | size | color  | quantity | cost | sum  |
+      | dress    |   8   |  black |  1   |  120     | 120  |
+      | turtleneck | 8   | white  |  3   | 15       | 45   |
+      | trousers  |   10 |  blue  |  2   |  50    |  100   |

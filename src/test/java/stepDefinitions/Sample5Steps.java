@@ -44,14 +44,33 @@ public class Sample5Steps {
     public void i_have_the_following_order(DataTable arg1) throws Throwable {
         for(Map<String, String> map: arg1.asMaps(String.class, String.class))
         {
-            String vegetableName = map.get("vegetable"); //cucumber
-            String quantity = map.get("quantity"); //4
-            String price = map.get("cost"); //10
+            String vegetableName = map.get("vegetable");
+            String quantity = map.get("quantity");
+            String price = map.get("cost");
             String sum = map.get("sum");
             System.out.println("Vegetable Name : " +vegetableName);
             System.out.println("Quantity : " +quantity);
             System.out.println("Cost : " +price);
             System.out.println("Sum : " +sum);
+        }
+    }
+
+    @Given("^I have the following order in webshop$")
+    public void i_have_the_following_order_in_webshop(DataTable arg1) throws Throwable {
+        for(Map<String, String> map: arg1.asMaps(String.class, String.class))
+        {
+            String clothesName = map.get("clothes");
+            String sizeName = map.get("size");
+            String colorName = map.get("color");
+            String quantityName = map.get("quantity");
+            String costName = map.get("cost");
+            String sumName = map.get("sum");
+            System.out.println("Clothes are : " +clothesName);
+            System.out.println("Size is  : " +sizeName);
+            System.out.println("This color is : " +colorName);
+            System.out.println("Quantity is : " +quantityName);
+            System.out.println("Cost : " +costName);
+            System.out.println("Sum : " +sumName);
         }
     }
 
