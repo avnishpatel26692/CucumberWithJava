@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import pages.AgePage;
 import pages.AgeSubmittedPage;
 
+import java.util.List;
 import java.util.Map;
 
 public class DatatablesWithPOSteps {
@@ -31,13 +32,10 @@ public class DatatablesWithPOSteps {
 
     @When("^I enter values using PO:$")
     public void userEnterDetails(Map<String, String> arg1) throws Throwable {
-        for (Map.Entry<String, String> map : arg1.entrySet()) {
-            String mapKey = map.getKey(); //name , age
-            String mapValue = map.getValue(); //Ann , 5
-            WebElement element = driver.findElement(By.id(mapKey));
-            element.clear();
-            element.sendKeys(mapValue);
-        }
+        System.out.println(arg1.get("name"));
+        agePO.enterName(arg1.get("name"));
+        System.out.println("age");
+        agePO.enterAge(arg1.get("age"));
     }
 
     @When("^I click submit age using PO$")
