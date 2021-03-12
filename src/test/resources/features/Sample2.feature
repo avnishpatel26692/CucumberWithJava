@@ -1,10 +1,11 @@
 Feature: Introduction to cucumber
   Some sample text here (definitions or stuff like that)
+Background:
+  Given User navigates to Age Page
 
-
-  Scenario: Navigate to Link Page
-    When User navigates to Link Page
-    Then user should verify page is opened correctly
+#  Scenario: Navigate to Link Page
+#    When User navigates to Link Page
+#    Then user should verify page is opened correctly
 
     Scenario: Check age page
       Given User navigates to Age Page

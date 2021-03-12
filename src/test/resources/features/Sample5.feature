@@ -22,3 +22,12 @@ Feature: Two Column Data Table
       |  Ann   | 5   | Hello, Ann, you are a kid   |
       |  Robin | 15  |    Hello, Robin, you are a teenager  |
       |     Sam|15   |     Hello, Robin, you are a Kid   |
+
+    @Sample5 @Test3
+      Scenario: 3 column Data Table
+      Given I have the following order
+      |vegetable|amount|cost| availability|
+      |cucumber |5     |10  |         yes    |
+      |carrot |6    |11|                 no |
+      |patato|15     |11  |             yes  |
+      |tomato |16     |17 |               no|

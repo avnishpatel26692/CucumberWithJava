@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -163,9 +164,18 @@ Assert.assertEquals(arg1,driver.findElement(By.id("result_checkbox")).getText())
     }
 
 
+    @Given("^I have the following order$")
+    public void iHaveTheFollowingOrder(DataTable arg1) throws Throwable {
+        for(Map<String, String> map: arg1.asMaps(String.class, String.class)) {
+            String vegName=map.get("vegetable");
+            String quantity = map.get("amount");
+            String vegPrice = map.get("cost");
+            String vegAvailable = map.get("availability");
+            System.out.println("Vegetable: "+vegName+" How many: "+quantity+" Price: "+vegPrice+" Available "+vegAvailable);
+        }
+        }
+    }
 
-
-}
 
 
 
