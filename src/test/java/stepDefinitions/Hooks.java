@@ -8,6 +8,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.net.MalformedURLException;
 
@@ -17,8 +19,18 @@ public class Hooks {
 
     @Before
     public void openBrowser() throws MalformedURLException {
-        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
-        driver = new ChromeDriver();
+        //Run in Chrome
+//        System.setProperty("webdriver.chrome.driver", libWithDriversLocation + "chromedriver.exe");
+//        driver = new ChromeDriver();
+//
+//        //Run test in Firefox
+        System.setProperty("webdriver.gecko.driver",libWithDriversLocation + "geckodriver.exe");
+        driver = new FirefoxDriver();
+
+//        Run test in IE Browser
+//        System.setProperty("webdriver.ie.driver",libWithDriversLocation + "IEDriverServer.exe");
+//        driver = new InternetExplorerDriver();
+
         driver.manage().deleteAllCookies();
     }
 
