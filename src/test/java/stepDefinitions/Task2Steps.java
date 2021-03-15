@@ -78,7 +78,7 @@ public class Task2Steps {
 
         Select select = new Select(driver.findElement(By.id("status")));
         select.selectByValue(status);
-        driver.findElement(By.id("dob")).sendKeys(date+ Keys.TAB);
+        driver.findElement(By.id("dob")).sendKeys(Keys.ENTER);
     }
 
     @When("^click on edit-button$")
