@@ -22,4 +22,4 @@ Feature: Introduction to cucumber part 3
     Given User navigate to Number page
     When User enter number: 81
     And click on Submit Button
-    Then appear message : "Number is too big"
+    Then appear text : "Square root of 81 is 9.00"

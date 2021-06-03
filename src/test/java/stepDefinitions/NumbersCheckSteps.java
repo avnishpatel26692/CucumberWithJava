@@ -48,7 +48,7 @@ public class NumbersCheckSteps {
 
     @Then("^appear message : \"([^\"]*)\"$")
     public void appear_message(String arg1) throws Throwable {
-        Assert.assertEquals("Hello, Ann, you are a kid",driver.findElement(By.id("ch1 error")).getText());
+        Assert.assertEquals(arg1,driver.findElement(By.id("ch1_error")).getText());
     }
 
     @When("^User enter number 101: (\\d+)$")
@@ -57,10 +57,13 @@ public class NumbersCheckSteps {
         enterNumber.sendKeys(""+arg2);
     }
 
-      @Then("^appear message too big : \"([^\"]*)\"$")
-    public void appear_message_too_big(String arg1) throws Throwable {
-        Assert.assertEquals("Number is too big",driver.findElement(By.id("ch1 error")).getText());
+    @When("^click on Submit Button$")
+    public void click_on_Submit_Button() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       WebElement subButton = driver.findElement(By.cssSelector("button"));
+       subButton.click();
     }
+
 
     @When("^User enter number 81: (\\d+)$")
     public void user_enter_number_81(int arg3) throws Throwable {
@@ -68,10 +71,10 @@ public class NumbersCheckSteps {
         enterNumber.sendKeys(""+arg3);
     }
 
-      @Then("^appear message correct : \"([^\"]*)\"$")
-    public void appear_message_correct(String arg1) throws Throwable {
+    @Then("^appear text : \"([^\"]*)\"$")
+    public void appear_text(String arg1) throws Throwable {
         Alert alert = driver.switchTo().alert();
-        Assert.assertEquals("Square root of 81 is 9.00",alert.getText());
+        Assert.assertEquals(arg1,alert.getText());
     }
 
 }

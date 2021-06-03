@@ -1,58 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="34.580265">
-<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid" time="7.809638">
-<system-out><![CDATA[Given User navigates to Age Page............................................passed
-When User enter details.....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, Ann, you are a kid".........................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="17.297795">
+<testcase classname="Introduction to cucumber part 3" name="NumbersTooSmall" time="6.100582">
+<system-out><![CDATA[Given User navigate to Number page..........................................passed
+When User enter number: 5...................................................passed
+And click on Submit Button..................................................passed
+Then appear message : "Number is too small".................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid" time="6.723562">
-<failure message="org.junit.ComparisonFailure: expected:&lt;Hello, A[nn, you are a kid]&gt; but was:&lt;Hello, A[BC, you are an adult]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at stepDefinitions.SampleSteps.user_see_message(SampleSteps.java:90)&#13;&#10;&#9;at ✽.Then User see message : &quot;Hello, ABC, you are an adult&quot;(src/test/resources/features/5.feature:18)&#13;&#10;"><![CDATA[Given User navigates to Age Page............................................passed
-When User enter details.....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, ABC, you are an adult"......................failed
-
-StackTrace:
-org.junit.ComparisonFailure: expected:<Hello, A[nn, you are a kid]> but was:<Hello, A[BC, you are an adult]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at stepDefinitions.SampleSteps.user_see_message(SampleSteps.java:90)
-	at ✽.Then User see message : "Hello, ABC, you are an adult"(src/test/resources/features/5.feature:18)
-]]></failure>
-</testcase>
-<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid 2" time="6.417813">
-<system-out><![CDATA[Given User navigates to Age Page............................................passed
-When User enter details.....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, Ann, you are a kid".........................passed
+<testcase classname="Introduction to cucumber part 3" name="NumbersTooBig" time="5.331905">
+<system-out><![CDATA[Given User navigate to Number page..........................................passed
+When User enter number: 101.................................................passed
+And click on Submit Button..................................................passed
+Then appear message : "Number is too big"...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid 3" time="6.854739">
-<failure message="org.junit.ComparisonFailure: expected:&lt;Hello, [Ann, you are a kid]&gt; but was:&lt;Hello, [Robin, you are a teenager]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at stepDefinitions.SampleSteps.user_see_message(SampleSteps.java:90)&#13;&#10;&#9;at ✽.Then User see message : &quot;Hello, Robin, you are a teenager&quot;(src/test/resources/features/5.feature:18)&#13;&#10;"><![CDATA[Given User navigates to Age Page............................................passed
-When User enter details.....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, Robin, you are a teenager"..................failed
-
-StackTrace:
-org.junit.ComparisonFailure: expected:<Hello, [Ann, you are a kid]> but was:<Hello, [Robin, you are a teenager]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at stepDefinitions.SampleSteps.user_see_message(SampleSteps.java:90)
-	at ✽.Then User see message : "Hello, Robin, you are a teenager"(src/test/resources/features/5.feature:18)
-]]></failure>
-</testcase>
-<testcase classname="Two Column Data Table" name="Check Age page functionality for Kid 4" time="6.774513">
-<failure message="org.junit.ComparisonFailure: expected:&lt;Hello, [Ann, you are a kid]&gt; but was:&lt;Hello, [Sam, you are a teenager]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at stepDefinitions.SampleSteps.user_see_message(SampleSteps.java:90)&#13;&#10;&#9;at ✽.Then User see message : &quot;Hello, Robin, you are a Kid&quot;(src/test/resources/features/5.feature:18)&#13;&#10;"><![CDATA[Given User navigates to Age Page............................................passed
-When User enter details.....................................................passed
-And Click on Submit button..................................................passed
-Then User see message : "Hello, Robin, you are a Kid".......................failed
-
-StackTrace:
-org.junit.ComparisonFailure: expected:<Hello, [Ann, you are a kid]> but was:<Hello, [Sam, you are a teenager]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at stepDefinitions.SampleSteps.user_see_message(SampleSteps.java:90)
-	at ✽.Then User see message : "Hello, Robin, you are a Kid"(src/test/resources/features/5.feature:18)
-]]></failure>
+<testcase classname="Introduction to cucumber part 3" name="NumbersCorrect" time="5.865308">
+<system-out><![CDATA[Given User navigate to Number page..........................................passed
+When User enter number: 81..................................................passed
+And click on Submit Button..................................................passed
+Then appear text : "Square root of 81 is 9.00"..............................passed
+]]></system-out>
 </testcase>
 </testsuite>
